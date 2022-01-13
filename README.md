@@ -1,5 +1,5 @@
 # code_examples
 
-* code_snippets : a few bits of custom functions I had to make
+* code_snippets : a few bits of custom WP functions I had to make for a client, plus a PHP class that can generate the *functionality and structure* for calendar views. Can be used to generate a calendar with previous/next month, trailing and leading days, week numbers, etc.
 * ikwilspril : landing page for <a href="https://ikwil.spril.nl" target="_blank">Spril</a>
 * starter_theme : example of one of the themes I've worked with, active on <a href="https://www.digital-twin-research.nl/">digital-twin-research.nl</a>
