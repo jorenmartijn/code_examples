@@ -1,0 +1,62 @@
+section.section-contact {
+	
+	// google Maps
+	//------------
+	.map {
+		height: 100%;
+		.acf-map {
+			height: 100%;
+			min-height: rem-calc(350);
+			border-radius: 0;
+			@include breakpoint(large) {
+				min-height: rem-calc(400);
+			}
+		}
+	}
+	.contact-info {
+		padding: rem-calc(35 0);
+		width: 100%;
+		.has-sidebar & {
+			padding-left: 0;
+			padding-right: 0;
+			@include breakpoint(medium) {
+				margin-left: rem-calc(- map-deep-get($grid-column-gutter, small) / 2);
+				margin-right: rem-calc(- map-deep-get($grid-column-gutter, small) / 2);
+			}
+		}
+		@include breakpoint(large) {
+			max-width: calc(1330px / 2);
+			padding: rem-calc(50 0 50 20);
+			.has-sidebar & {
+				max-width: 100%;
+			}
+			.home & {
+				padding: rem-calc(60 0 60 30);
+			}
+		}
+		.contact-block {
+			ul.contact-list {
+				margin-top: rem-calc(15);
+				li {
+					margin-bottom: rem-calc(10);
+				}
+			}
+			a.btn-secondary {
+				margin-top: rem-calc(10);
+			}
+		}
+		.button-group {
+			.has-sidebar & {
+				a:nth-child(2) {
+					margin-top: rem-calc(20);
+				}
+			}
+		}
+		.opening-block {
+			margin-top: rem-calc(40);
+			@include breakpoint(medium) {
+				margin-top: 0;
+			}
+		}
+	}
+}

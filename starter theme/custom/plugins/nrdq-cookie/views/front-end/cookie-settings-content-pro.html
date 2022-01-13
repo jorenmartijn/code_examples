@@ -1,0 +1,34 @@
+<div class="cookie__wrap is-pro">
+	<div class="cookie__inner">
+		<img src="{{title_icon_url}}" alt="Cookie icon"><h2>{{title}}</h2>
+		{{{nrdq_cookie_settings_text}}}
+
+		<div id="nrdq-cookie-settings-form" class="cookie__radio-group">
+  		<input type="hidden" class="nonce" value="{{nonce}}" />
+
+		  <ul id="cookie-check" class="cookie__types">
+  		  <li>
+	      	<input id="check_idx_1" name="check_idx_1" type="checkbox" disabled><label for="check_idx_1">
+	      	<span class="title">{{#i18n}}Functionele cookies{{/i18n}}</span>{{#i18n}}Cookies die er voor zorgen dat deze website naar behoren functioneert{{/i18n}}</label>
+			  </li>
+        {{#cookie_types}}
+          <li>
+		      	<input id="settings-{{value}}" name="{{value}}" type="checkbox" {{#check_level}}{{value}}{{/check_level}}><label for="settings-{{value}}">
+		      	<span class="title">{{label}}</span>{{{description}}}</label>
+				  </li>
+        {{/cookie_types}}
+		  </ul>
+
+		</div>
+
+		<div class="cookie__button-group">
+			<a href="javascript:;" class="cookie__btn secondary action" target="_self" title="{{submit_text}}">{{submit_text}}</a>
+		</div>
+
+
+	</div>
+
+	<a href="javascript:;" class="cookie__close-pop-up" target="_self" title="Cookie pop-up sluiten">
+		<img src="{{close_url}}" alt="Cookie pop-up sluiten">
+	</a>
+</div>

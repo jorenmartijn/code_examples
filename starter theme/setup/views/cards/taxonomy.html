@@ -1,0 +1,64 @@
+<div class="description">
+    <h2>Uitleg</h2>
+   <p>
+       Geef hier de verschillende taxonomieeen op die de site bevat. Je kunt zelf kiezen aan welke posttypes ze gekoppeld worden.
+       Na het opslaan zal automatisch de benodigde code aan je thema toegevoegd worden.
+   </p>
+</div>
+
+<div class="fields">
+    <h2>Data</h2>
+    <form method="POST">
+        <fieldset>
+            <div class="post-type-container">
+                {{#obj.getAllTaxonomies}}
+                    <a class="accordion">{{type-name-singular}}</a><span class="accordion-trash"> <i class="fas fa-trash-alt"></i></span>
+                    <div class="panel">
+                        <label>Naam enkelvoud</label><br>
+                        <input class="large" type="text" name="type-name-singular-{{type-idx}}" placeholder="Naam enkelvoud" value="{{type-name-singular}}" required>
+                        <label>Naam meervoud (en slug)</label><br>
+                        <input class="large" type="text" name="type-name-plural-{{type-idx}}" placeholder="Naam meervoud" value="{{type-name-plural}}" required>
+                        <input class="large" id="type-add-e-{{type-idx}}" type="checkbox" name="type-add-e-{{type-idx}}" value="1" {{#type-add-e}}checked{{/type-add-e}}><label for="type-add-e-{{type-idx}}">Buigings-e (nieuw of nieuwe)?</label><br>
+                        <input class="large no-mar" id="type-is-hierarchical-{{type-idx}}" type="checkbox" name="type-is-hierarchical-{{type-idx}}" value="1" {{#type-is-hierarchical}}checked{{/type-is-hierarchical}}><label for="type-is-hierarchical-{{type-idx}}">Is dit post type hiërarchisch?</label>
+                        <p class="description">Kan je een categorie toewijzen aan een hoofd (parent/child categorieen)?</p>
+                        <label>Gekoppelde posttypes</label><br>
+                        {{#post-types}}
+                            <input class="large no-mar" id="type-cpts-{{type}}" type="checkbox" name="type-cpts-{{type-idx}}[]" value="{{type}}" {{#value}}checked{{/value}}><label for="type-cpts-{{type}}">{{name}}</label><br>
+                        {{/post-types}}
+                    </div>
+                {{/obj.getAllTaxonomies}}
+            </div>
+            <a class="button full-width" id="add-post-type" href="javascript:">+ Voeg taxonomie toe</a>
+            <input class="button" type="submit" value="Opslaan">
+        </fieldset>
+    </form>
+    <!-- Below are not Mustache variables. These are populated by Javascript.  -->
+    <div class="form-item-template hide">
+        <a class="accordion full-width">Nieuwe taxonomie</a><span class="accordion-trash"> <i class="fas fa-trash-alt"></i></span>
+        <div class="panel">
+            <label>Naam enkelvoud</label><br>
+            <input class="large" type="text" name="type-name-singular-{id}" placeholder="Soort" required>
+            <label>Naam meervoud (en slug)</label><br>
+            <input class="large" type="text" name="type-name-plural-{id}" placeholder="Soorten" required>
+            <input class="large" id="type-add-e-{id}" type="checkbox" name="type-add-e-{id}" value="1" checked><label for="type-add-e-{id}">Buigings-e (nieuw of nieuwe)?</label><br>
+            <input class="large no-mar" id="type-is-hierarchical-{id}" type="checkbox" name="type-is-hierarchical-{id}" value="1"><label for="type-is-hierarchical-{id}">Is dit post type hiërarchisch?</label>
+            <p class="description">Kan je een categorie toewijzen aan een hoofd (parent/child categorieen)?</p>
+            <label>Gekoppelde post types:</label><br>
+            <input class="large no-mar" id="type-cpts-page" type="checkbox" name="type-cpts-{id}[]" value="page"><label for="type-cpts-page">Pagina's</label><br>
+            <input class="large no-mar" id="type-cpts-post" type="checkbox" name="type-cpts-{id}[]" value="post"><label for="type-cpts-post">Berichten</label><br>
+            <label>Gekoppelde posttypes</label><br>
+            {{#obj.getAllPostTypes}}
+                <input class="large no-mar" id="type-cpts-{{type-slug}}" type="checkbox" name="type-cpts-{id}[]" value="{{type-slug}}"><label for="type-cpts-{{type-slug}}">{{type-name-plural}}</label><br>
+            {{/obj.getAllPostTypes}}
+        </div>
+    </div>
+</div>
+
+<div class="code">
+    <h2>Code</h2>
+    {{#obj.getCode}}
+    <h4 class="code-header {{#automatic}}automatic{{/automatic}}">{{title}} {{#automatic}}(Automatisch toegevoegd){{/automatic}}</h4>        <pre><code>{{code}}</code></pre>
+    {{/obj.getCode}}
+</div>
+
+

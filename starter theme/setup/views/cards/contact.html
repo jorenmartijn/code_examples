@@ -1,0 +1,35 @@
+<div class="description">
+    <h2>Uitleg</h2>
+   <p>
+       Op deze pagina vind je automatiseringen en code snippets met betrekking tot het contact template.
+        Kopieer hier de code voor het tonen van de contactinformatie en de socials en plak deze direct in je template.
+       <br><br>
+       Ook is het mogelijk om aan te geven of je site een contactformulier bevat. In dat geval zal er direct een standaard
+       contactformulier gegenereerd worden, waarvan de shortcode onder het veld getoond wordt. Deze kun je dan direct overal in
+       de site gebruiken.
+   </p>
+</div>
+
+<div class="fields">
+    <h2>Data</h2>
+    <form method="POST">
+        <fieldset>
+            <input class="large no-mar" id="has_form" type="checkbox" name="has_form" value="1" {{#obj.hasForm}}checked{{/obj.hasForm}}><label for="has_form">Is er een contactformulier?</label>
+            {{#obj.hasForm}}
+                <p class="description">Let op: voeg na het opslaan onderstaande code toe aan je template</p>
+                <pre>{{obj.getFormCode}}</pre>
+            {{/obj.hasForm}}
+            <input class="button" type="submit" value="Opslaan">
+        </fieldset>
+    </form>
+</div>
+
+<div class="code">
+    <h2>Code</h2>
+    {{#obj.getCode}}
+        <h4 class="code-header {{#automatic}}automatic{{/automatic}}">{{title}} {{#automatic}}(Automatisch toegevoegd){{/automatic}}</h4>
+        <pre><code>{{code}}</code></pre>
+    {{/obj.getCode}}
+</div>
+
+

@@ -1,0 +1,118 @@
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Project-Id-Version: Nordique cookiemelding\n"
+"POT-Creation-Date: 2018-09-18 16:36+0200\n"
+"PO-Revision-Date: 2018-09-19 09:55+0200\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.1.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: nrdq-cookie.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Last-Translator: \n"
+"Language: es\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SearchPathExcluded-1: vendor\n"
+
+#: controller/controller.php:37
+msgid "Analytische cookies"
+msgstr "Cookies analíticas"
+
+#: controller/controller.php:37
+msgid ""
+"Cookies waarmee wij het gebruik van de website kunnen meten. Gegevens die "
+"met deze cookies worden verzameld, worden gecombineerd en geaggregeerd ten "
+"behoeve van statistische analyse."
+msgstr ""
+"Cookies con las que podemos medir el uso del sitio Web. Los datos "
+"recopilados con estas cookies se combinan y se agregan para fines de "
+"análisis estadístico."
+
+#: controller/controller.php:40
+msgid "Social media"
+msgstr "Social media"
+
+#: controller/controller.php:40
+msgid ""
+"Cookies om de inhoud van onze website te delen via Social Media. Social "
+"Media netwerken doen aan profiling en tracking van bezoekers. Door deze "
+"cookies te accepteren kan je internetgedrag gemonitord worden door social "
+"media."
+msgstr ""
+"Cookies para compartir el contenido de nuestro sitio web a través de los "
+"medios sociales. Las redes de medios sociales hacen el perfil y el "
+"seguimiento de los visitantes. Al aceptar estas cookies, su comportamiento "
+"en Internet puede ser monitoreado por los medios sociales."
+
+#: controller/controller.php:43
+msgid "Advertentie cookies"
+msgstr "Cookies de anuncio"
+
+#: controller/controller.php:43
+msgid ""
+"Cookies waarmee advertenties kunnen worden afgestemd op jouw internetgedrag. "
+"Door deze cookies te accepteren kan je internetgedrag gemonitord worden door "
+"advertentie netwerken."
+msgstr ""
+"Cookies que permiten que los anuncios coincidan con el comportamiento de "
+"Internet. Al aceptar estas cookies, su comportamiento en Internet puede ser "
+"monitoreado por las redes publicitarias."
+
+#: controller/controller.php:89
+msgid "Meer informatie"
+msgstr "Más información"
+
+#: controller/controller.php:90
+msgid "Minder informatie"
+msgstr "Menos información"
+
+#: controller/front-end/plugin-public.php:57
+#: controller/front-end/plugin-public.php:140
+msgid "Cookie instellingen"
+msgstr "Configuración de cookies"
+
+#: controller/front-end/plugin-public.php:59
+#: controller/front-end/plugin-public.php:61
+msgid "Toestaan"
+msgstr "Permite"
+
+#: controller/front-end/plugin-public.php:60
+msgid "Niet toestaan"
+msgstr "No permitir"
+
+#: controller/front-end/plugin-public.php:142
+msgid "De cookies worden overal op de site geblokkeerd."
+msgstr "Las cookies se bloquean en cualquier lugar del sitio."
+
+#: controller/front-end/plugin-public.php:143
+msgid "De cookies worden op dit moment toegestaan."
+msgstr "Las cookies están permitidas actualmente."
+
+#: controller/front-end/plugin-public.php:144
+msgid "Wijzigingen opslaan"
+msgstr "Guardar cambios"
+
+#. Plugin Name of the plugin/theme
+msgid "Nordique cookiemelding"
+msgstr "Notificación de cookies Nordique"
+
+#. Plugin URI of the plugin/theme
+#. Author URI of the plugin/theme
+msgid "https://www.nordique.nl"
+msgstr "https://www.Nordique.nl"
+
+#. Description of the plugin/theme
+msgid "Deze plugin toont een cookiemelding die voldoet aan de AVG."
+msgstr "Este plugin muestra una notificación de cookies que cumple con la AVG."
+
+#. Author of the plugin/theme
+msgid "Nordique"
+msgstr "Nordique"

@@ -1,0 +1,58 @@
+aside {
+	// padding: rem-calc(35 0);
+	padding: rem-calc(0 0 35 0);
+	@include breakpoint(large) {
+		padding: rem-calc(60 0);
+	}
+	.card {
+		margin-top: rem-calc(20);	
+		&.primary-bg {
+			h2, p, span {
+				color: $white; // Change if it's necessary
+			}
+		}
+		&.secondary-bg {
+			h2, p, span {
+				color: $white; // Change if it's necessary
+			}
+		}
+	}
+	.column {
+		@include breakpoint(medium only) {
+			&:nth-child(1), &:nth-child(n+2) {
+				.card {
+					margin-top: 0;
+				}
+			}
+		}
+	}
+	a[class*="btn-"] {
+		max-width: rem-calc(400);
+	}
+
+	// background image block
+	//-----------------------
+	.has-bg-image {
+		position: relative;
+		> .row {
+			.content {
+				padding-top:5rem;
+				padding-bottom:5rem;
+			}
+		}
+		.bg-image {
+			mix-blend-mode: multiply;
+			position: absolute;
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			opacity: .5;
+		}
+		h2 {
+			position: relative;
+			z-index: 2;
+			color: $white;
+		}
+	}
+}

@@ -1,0 +1,50 @@
+<table class="form-table">
+	<tbody>
+		<tr>
+      <th scope="row">Cookiemelding zichtbaarheid</th>
+      <td>
+        <fieldset>
+        	<label for="cookie_hidden">
+          	<input name="nrdq_cookie_hidden" type="checkbox" id="cookie_hidden" value="1" {{data.nrdq_cookie_hidden}} />Verberg de cookiemelding
+        	</label>
+        </fieldset>
+      </td>
+    </tr>
+		<tr>
+      <th scope="row">Positie</th>
+      <td>
+      	<fieldset>
+      	  <label><input type="radio" name="nrdq_cookie_position" value="top" {{data.nrdq_cookie_position.top}}> <span>Bovenaan de pagina</span></label><br>
+          <label><input type="radio" name="nrdq_cookie_position" value="bottom" {{data.nrdq_cookie_position.bottom}}> <span>Onderaan de pagina</span></label><br>
+      	</fieldset>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">AJAX</th>
+      <td>
+      	<fieldset>
+      	  <label><input name="nrdq_cookie_ajax" type="checkbox" id="nrdq_cookie_ajax" value="1" {{data.nrdq_cookie_ajax}} />Deze cookiemelding moet via AJAX werken (t.b.v. caching e.d.)</label>
+      	</fieldset>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Debug</th>
+      <td>
+      	<fieldset>
+      	  <label for="cookie_debug">
+          	<input name="nrdq_cookie_debug" type="checkbox" id="cookie_debug" value="1" {{data.nrdq_cookie_debug}} />Zet de debugging functionaliteit aan. LET OP: vink dit veld niet aan op een live site
+        	</label>
+      	</fieldset>
+      </td>
+    </tr>
+    <tr>
+      <fieldset>
+        <th scope="row"><label for="cookie_title">Toon melding alleen op IP</label></th>
+        <td>
+          <input name="nrdq_cookie_ip" type="text" id="nrdq_cookie_ip" value="{{data.nrdq_cookie_ip}}" class="regular-text" placeholder="IP-adres">
+          <p class="description">Meerdere IP-adressen moeten gescheiden worden met een komma. Laat dit veld leeg om de cookiemelding overal te tonen.</p>
+        </td>
+      </fieldset>
+    </tr>
+	</tbody>
+</table>

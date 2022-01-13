@@ -1,0 +1,31 @@
+<div class="description">
+    <h2>Uitleg</h2>
+   <p>
+       Hier kun je testcontent genereren voor elk posttype binnen je site. Hierbij kun je zelf aangegeven hoeveel berichten je wilt genereren.
+       Wel maximaal 20 tegelijk, zodat we geen timeout krijgen. Er worden automatisch een willekeurig aantal verschillende Gutenberg blokken
+       toegevoegd aan je post, om de data zo divers mogelijk te maken. De content wordt automatisch opgehaald via een online Lorem Ipsum generator.
+       Ook wordt er, indien mogelijk, een uitgelichte afbeelding gekoppeld.
+       <br><br>
+        <span class="important">Let op: begin eerst met het genereren van media. Anders kan er namelijk geen uitgelichte afbeelding gekoppeld worden.</span>
+   </p>
+</div>
+
+<div class="fields">
+    <h2>Data</h2>
+    <form method="POST">
+        <fieldset>
+            <h4>Content toevoegen</h4>
+            <label for="number">Aantal posts</label>
+            <input id="number" type="number" name="number" value="10" max="20">
+
+            <h5>Posttypes</h5>
+            <input type="submit" class="button full-width" value="Genereer testcontent voor media" name="attachment">
+            <input type="submit" class="button full-width" value="Genereer testcontent voor pagina's" name="page">
+            <input type="submit" class="button full-width" value="Genereer testcontent voor berichten" name="post">
+            {{#obj.getPostTypes}}
+                <input type="submit" class="button full-width" value="Genereer testcontent voor {{.}}" name="{{.}}">
+            {{/obj.getPostTypes}}
+        </fieldset>
+    </form>
+</div>
+

@@ -1,0 +1,28 @@
+<div class="description">
+    <h2>Uitleg</h2>
+   <p>
+       Tegenwoordig hebben de meeste sites wel één of meerdere popups. In het geval dat deze site ook popups bevat
+       kun je dat hieronder aanzetten. Elke site bevat standaard code voor ondersteuning van popups bij pageload, page leave en na een gebruikersactie.
+       <br><br>
+       <span class="important">Zorg ervoor dat <a href=" https://get.foundation/sites/docs/reveal" target="_blank">Foundation Reveals</a> zijn ingeschakeld.</span>
+   </p>
+</div>
+
+<div class="fields">
+    <h2>Data</h2>
+    <form method="POST">
+        <fieldset>
+            <input class="large" id="has_popup" type="checkbox" name="has_popup" value="1" {{#obj.hasPopup}}checked{{/obj.hasPopup}}><label for="has_popup">Is er een popup op deze site?</label>
+            <input class="button" type="submit" value="Opslaan">
+        </fieldset>
+    </form>
+</div>
+
+<div class="code">
+    <h2>Code</h2>
+    {{#obj.getCode}}
+    <h4 class="code-header {{#automatic}}automatic{{/automatic}}">{{title}} {{#automatic}}(Automatisch toegevoegd){{/automatic}}</h4>        <pre><code>{{code}}</code></pre>
+    {{/obj.getCode}}
+</div>
+
+

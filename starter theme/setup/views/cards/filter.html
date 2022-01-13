@@ -1,0 +1,31 @@
+<div class="description">
+    <h2>Uitleg</h2>
+   <p>
+       Hieronder vind je informatie over het filteren, sorteren en zoeken op archief pagina's.
+       <br><br>
+       Normaal gesproken heb je 2 verschillende opties, namelijk: live zoeken en filteren via AJAX of via taxonomie overzichten en dergelijk.
+       Voor beide opties is hieronder een voorbeeld uitgewerkt. Beide opties zouden out of the box moeten werken, als ze op de correcte plek geplaatst worden.
+       <br><br>
+       <span class="important">AJAX versie</span><br>
+       De code voor deze versie moet in het archief binnen de AJAX section container geplaatst worden. Dit is normaal gesproken het element
+       met de class 'section' maar dit kan aangepast zijn in dit project. In dat geval moet je het JavaScript bestand filters.js controleren
+       op de juiste container. Let op: deze versie kan alleen gebruikt worden bij posttypes die gebruik maken
+       van AJAX paginatie.
+       <br><br>
+       <span class="important">Normale versie</span><br>
+       Bij de normale versie wordt niet gebruik gemaakt van live filtering, maar van losse pagina's, met daarop de gevraagde informatie.
+       Hierbij kan dus niet op 2 verschillende categorieen gefilterd worden, maar het voordeel is wel dat het makkelijker is om te linken
+       naar losse categorie overzichten. Let op: hiervoor moeten wel je taxonomie-overzichten ingeschakeld zijn.
+   </p>
+</div>
+
+
+<div class="code">
+    <h2>Code</h2>
+    {{#obj.getCode}}
+    <h4 class="code-header {{#automatic}}automatic{{/automatic}}">{{title}} {{#automatic}}(Automatisch toegevoegd){{/automatic}}</h4>
+    <pre><code>{{code}}</code></pre>
+    {{/obj.getCode}}
+</div>
+
+

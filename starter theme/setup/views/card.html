@@ -1,0 +1,16 @@
+<div class="single-container">
+    <header>
+        <h1 class="left">{{obj.getModule}}</h1>
+        <a class="button right" href="{{data.helpers.baseUrl}}/setup">Terug naar het overzicht</a>
+    </header>
+
+    <div class="clear"></div>
+
+    {{#notice}}
+        <div class="notice {{notice.type}}"><p>{{notice.message}}</p></div>
+    {{/notice}}
+
+    {{{content}}}
+
+</div>
+

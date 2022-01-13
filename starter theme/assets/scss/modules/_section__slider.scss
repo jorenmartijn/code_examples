@@ -1,0 +1,84 @@
+section.section-slider {
+	h2 {
+		margin-bottom: rem-calc(25);
+	}
+	.gallery-slider {
+		display: none;
+		position: relative;
+		overflow: hidden;
+		border-radius: $global-radius;
+		max-height: rem-calc(340); // max-height of the 'gallery-medium' image-size.
+		&.slick-initialized {
+			display: block;
+			outline: 0;
+		}
+		.gallery-container {
+			outline: 0;
+			height: rem-calc(270);
+			display: table;
+			@include breakpoint(medium) {
+				padding-left: rem-calc(15);
+				padding-right: rem-calc(15);
+				height: rem-calc(340);
+			}
+			&:first-child {
+				padding-left: 0;
+			}
+			&:last-child {
+				padding-right: 0;
+			}
+		}
+		figure {
+			display: table-cell;
+			vertical-align: middle;
+			img {
+				margin: 0 auto;
+				overflow: hidden;
+				@include breakpoint(retina) {
+					max-height: rem-calc(340);
+				}
+			}
+		}
+		.button {
+			@extend %transition;
+			cursor: pointer;
+			z-index: 1;
+			width: rem-calc(40);
+			height: rem-calc(40);
+			line-height: 40px;
+			background-color: $secondary-color;
+			border-radius: 50%;
+			color: $white;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			font-size: $font-size-15;
+			text-align: center;
+			@include breakpoint(medium) {
+				width: rem-calc(56);
+				height: rem-calc(56);
+				line-height: 56px;
+				font-size: $font-size-19;
+			}
+			&.slick-prev {
+				left:  rem-calc(5);
+				@include breakpoint(medium) {
+					left: rem-calc(20);
+				}
+			}
+			&.slick-next {
+				right: rem-calc(5);
+				@include breakpoint(medium) {
+					right: rem-calc(20);
+				}
+			}
+			&.slick-disabled {
+				visibility: hidden;
+				opacity: 0;
+			}
+			&:hover {
+				background-color: darken($primary-color, 3%);
+			}
+		}
+	}
+}

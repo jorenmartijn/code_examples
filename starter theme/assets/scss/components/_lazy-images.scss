@@ -1,0 +1,11 @@
+img.lazy {				
+	opacity: 0;				
+	&.image-loaded {
+		animation: imageTransition 1s forwards; 
+	}
+}
+
+@keyframes imageTransition {
+	0%   { opacity: 0; }
+	100% { opacity: 1; }
+}

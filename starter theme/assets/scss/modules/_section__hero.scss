@@ -1,0 +1,40 @@
+section.section-hero {
+	padding: 0;
+	@include breakpoint(medium) {
+		height: rem-calc(900);
+	}
+	@include breakpoint(medium) {
+		height: rem-calc(540);
+	}
+	@include breakpoint(large) {
+		height: rem-calc(860);
+	}
+	@include breakpoint(xxlarge) {
+		height: rem-calc(900);
+	}
+	.mobile-hero-image {
+		position: relative;
+		@include breakpoint(small only) {
+			height: rem-calc(370);
+		}
+	}
+	.hero-content {
+		background-color: rgba($black, 0.7);
+		color: $white;
+		padding: rem-calc(30 20);
+		box-shadow: $card-shadow;
+		margin-top: -.5rem;
+		@include breakpoint(medium) {
+			opacity: 0;
+			animation: slideIn 1500ms ease-in-out forwards;
+		}
+		h1,h2,h3 {
+			color: $white;
+		}
+		@include breakpoint(medium) {
+			margin-top: 0;
+			border-radius: $global-radius;
+			padding: rem-calc(30);
+		}
+	}
+}

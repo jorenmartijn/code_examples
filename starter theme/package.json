@@ -1,0 +1,33 @@
+{
+  "name": "Nordique_GULP",
+  "version": "1.0.0",
+  "description": "A generic package.json that holds al basic dependencies for Nordique projects",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nordique bv",
+  "license": "ISC",
+  "dependencies": {
+    "argv": "*",
+    "autoprefixer": "<10.0.0",
+    "browser-sync": "*",
+    "css-mqpacker": "*",
+    "del": "*",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "*",
+    "gulp-concat": "*",
+    "gulp-connect-php": "*",
+    "gulp-if": "*",
+    "gulp-imagemin": "*",
+    "gulp-jshint": "*",
+    "gulp-notify": "*",
+    "gulp-postcss": "*",
+    "gulp-rename": "*",
+    "gulp-sass": "*",
+    "gulp-sourcemaps": "*",
+    "gulp-uglify": "*",
+    "jshint": "*",
+    "pump": "^3.0.0"
+  }
+}

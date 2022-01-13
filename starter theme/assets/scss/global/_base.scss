@@ -1,0 +1,283 @@
+body,
+html {
+  letter-spacing: $global-letterspacing;
+
+  &.no-scrolling {
+    overflow: hidden;
+  }
+}
+
+
+// heading
+// -------
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: $header-letterspacing;
+}
+
+%h1,
+.is-h1 {
+  @extend h1;
+  color: $primary-color;
+  &.is-hero {
+
+  }
+}
+
+%h2,
+.is-h2 {
+  @extend h2;
+  color: $secondary-color;
+}
+
+%h3,
+.is-h3 {
+  @extend h3;
+  color: $secondary-color;
+}
+
+%h4,
+.is-h4 {
+  @extend h4;
+  color: $secondary-color;
+
+}
+
+%h5,
+.is-h5 {
+  @extend h5;
+  color: $secondary-color;
+}
+
+%h6,
+.is-h6 {
+  @extend h6;
+  color: $secondary-color;
+}
+
+
+// paragraph
+// ---------
+.is-p,
+p {
+  @extend p;
+}
+
+a {
+	@extend %transition;
+}
+
+// disable outline for mouse and touch clicks
+// ------------------------------------------
+[data-whatinput="mouse"] a:focus, button:focus
+[data-whatinput="touch"] a:focus, button:focus {
+  outline: none;
+}
+
+.full-height {
+	height: 100%;
+}
+.full-width {
+	width: 100%;
+}
+.is-uppercase {
+  text-transform: uppercase;
+}
+.is-lowercase {
+  text-transform: lowercase;
+}
+
+address {
+	font-style: normal;
+	span {
+		display: block;
+	}
+}
+
+
+// sections
+// --------
+section, %section-pad {
+	padding: rem-calc(30 0);
+  @include breakpoint(medium) {
+	  padding: rem-calc(40 0);
+  }
+	@include breakpoint(large) {
+		padding: rem-calc(60 0);
+	}
+}
+
+
+// cover
+// -----
+.is-cover {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  &.top {
+    background-position: top center;
+  }
+  &.bottom {
+    background-position: bottom center;
+  }
+}
+
+// background-color
+//----------------
+.primary-bg {
+	background-color: $primary-color;
+	&.light-bg {
+		background-color: $primary-light;
+    color: $white;
+    h1,h2,h3,h4,h5,h6 {
+      color: $white;
+    }
+	}
+}
+
+.secondary-bg {
+	background-color: $secondary-color;
+	&.light-bg {
+		background-color: $secondary-light;
+	}
+}
+
+.tertiary-bg {
+	background-color: $tertiary-color;
+	&.light-bg {
+		background-color: $tertiary-light;
+	}
+}
+
+.white-bg {
+	background-color: $white;
+}
+.gray-bg {
+	background-color: $light-gray;
+}
+
+
+// margin
+// ------
+.no-mar, %no-mar {
+  margin: 0;
+}
+.no-mar-right, %no-mar-right {
+	margin-right: 0;
+}
+.no-mar-left, %no-mar-left {
+	margin-left: 0;
+}
+.no-mar-top, %no-mar-top {
+  margin-top: 0;
+}
+.no-mar-bottom, %no-mar-bottom {
+	margin-bottom: 0;
+}
+.no-mar-y, %no-mar-y {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.no-mar-x, %no-mar-x {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.extra-mar-bottom {
+	margin-bottom: $global-margin;
+	@include breakpoint(large) {
+		margin-bottom: $global-extra-margin;
+	}
+}
+.extra-mar-top {
+	margin-top: $global-margin;
+	@include breakpoint(large) {
+		margin-top: $global-extra-margin;
+	}
+}
+
+
+// padding
+// -------
+.no-pad, %no-pad {
+  padding: 0;
+}
+.no-pad-top, %no-pad-top {
+  padding-top: 0;
+}
+.no-pad-bottom , %no-pad-bottom  {
+  padding-bottom: 0;
+}
+.no-pad-y, %no-pad-y {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.no-pad-x, %no-pad-x {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+
+.main-wrap {
+  position: relative;
+
+  &:after {
+    $img_height: 200;
+
+    left: 0;
+    width: rem-calc($img_height);
+    height: rem-calc($img_height);
+    bottom: 0;
+    content: '';
+    opacity: 0.3;
+    display: inline-block;
+    position: absolute;
+    background: url('../svg/favicon.svg') 50% / contain no-repeat;
+  }
+
+  .sticky {
+    @include breakpoint(large down){
+      position: static!important;
+    }
+  }
+}
+
+
+// Custom Shrink Classes
+// ---------------------
+@each $breakpoint in $breakpoint-classes {
+  @if $breakpoint == small {
+    // Do nothing
+  } @else {
+    @include breakpoint($breakpoint) {
+      .#{$breakpoint}-shrink {
+        flex: 0 0 auto;
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+
+// IE fix for SVG
+// --------------
+img[src*=".svg"] {
+  width: 100%;
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  img[src*=".svg"] {
+    width: 100%;
+  }
+}
+
+
+// fixes first letter of menu items (the highlight search results function overwrites this)
+// ----------------------------------------------------------------------------------------
+footer li a::first-letter, nav li a::first-letter {
+  text-transform: capitalize;
+}

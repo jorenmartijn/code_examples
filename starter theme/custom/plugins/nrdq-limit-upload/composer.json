@@ -1,0 +1,6 @@
+{
+    "require": {
+        "mustache/mustache" : "^2.7",
+        "enshrined/svg-sanitize": "^0.10.0"
+    }
+}

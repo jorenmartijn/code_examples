@@ -1,0 +1,57 @@
+// global card
+//------------
+.card {
+	overflow: hidden;
+	width: 100%;
+	box-shadow: $card-shadow;
+	border-radius: $global-radius;
+	margin-bottom: rem-calc(map-deep-get($grid-column-gutter, small) );
+	border-bottom:rem-calc(2) solid $secondary-color;
+	@include breakpoint(medium) {
+		margin-bottom: rem-calc(map-deep-get($grid-column-gutter, small) );
+	}
+	figure {
+		position: relative;
+		max-height: rem-calc(260);
+		overflow: hidden;
+		img {
+			width: 100%;
+			@include breakpoint(retina) {
+				@include breakpoint(large down) {
+					max-width: 110%;
+				}
+				@include breakpoint(xlarge) {
+					max-width: none;
+					max-height: rem-calc(270);
+				}
+			}
+		}
+		@include breakpoint(xlarge) {
+			height: rem-calc(270);
+			img {
+				width: auto;
+				max-width: none;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translateY(-50%) translateX(-50%);
+			}
+		}
+	}
+	.content {
+		padding: rem-calc(15);
+		@include breakpoint(large) {
+			padding: rem-calc(25);
+		}
+		h1, h2,
+		h3, h4,
+		h5, h6 {
+			a {
+				text-decoration: none;
+			}
+		}
+		a + p {
+			display: none;
+		}
+	}
+}

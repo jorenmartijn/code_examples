@@ -1,0 +1,32 @@
+<div class="cookie__wrap">
+	<div class="cookie__inner">
+		<img src="{{title_icon_url}}" alt="Cookie icon"><h2>{{title}}</h2>
+		{{{nrdq_cookie_settings_text}}}
+
+		<div id="nrdq-cookie-settings-form" class="cookie__radio-group">
+  		<input type="hidden" class="nonce" value="{{nonce}}" />
+		  <input type="radio"  value="10" id="cookies-yes" name="nrdq_cookie_settings" {{#check_level}}10{{/check_level}}>
+		  <label class="radio circle" for="cookies-yes">
+		    <span class="big">
+		      <span class="small"></span>
+		    </span>{{level_10_text}}
+		  </label>
+		  <input type="radio"  value="0" id="cookies-no" name="nrdq_cookie_settings" {{#check_level}}0{{/check_level}}>
+		  <label class="radio circle" for="cookies-no">
+		    <span class="big">
+		      <span class="small"></span>
+		    </span>{{level_0_text}}
+		  </label>
+		</div>
+
+		<div class="cookie__button-group">
+			<a href="javascript:;" class="cookie__btn secondary action" target="_self" title="{{submit_text}}">{{submit_text}}</a>
+		</div>
+
+
+	</div>
+
+	<a href="javascript:;" class="cookie__close-pop-up" target="_self" title="Cookie pop-up sluiten">
+		<img src="{{close_url}}" alt="Cookie pop-up sluiten">
+	</a>
+</div>

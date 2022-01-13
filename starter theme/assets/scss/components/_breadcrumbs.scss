@@ -1,0 +1,38 @@
+#breadcrumbs {
+	padding: rem-calc(15 0);
+
+
+	@include breakpoint(large) {
+		padding-top: rem-calc(30);
+		padding-bottom: rem-calc(30);
+	}
+	@include breakpoint(1465) {
+		margin-top: rem-calc(196);
+		//padding-top: rem-calc(110);
+	}
+	a {
+		color: $primary-color;
+	}
+
+	a, span {
+		font-size: $font-size-12;
+
+		@include breakpoint(large) {
+			font-size: $font-size-15;
+		}
+	}
+	i {
+		margin: rem-calc(0 2);
+		font-size: $font-size-12;
+		color: $primary-color;
+		@include breakpoint(large) {
+			margin: rem-calc(0 5);
+		}
+	}
+
+
+}
+
+.breadcrumbs {
+	background-color: rgba(83,190,200, 0.05);
+}

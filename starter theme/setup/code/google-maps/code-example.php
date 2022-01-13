@@ -1,0 +1,3 @@
+?>
+{{{obj.getMap}}}
+<?php

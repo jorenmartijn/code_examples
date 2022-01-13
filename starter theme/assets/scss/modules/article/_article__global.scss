@@ -1,0 +1,14 @@
+article {
+	padding: rem-calc(35 0);
+	@include breakpoint(large) {
+		padding: rem-calc(60 0);
+	}
+	section.gray-bg.bg-active, 	
+	section.primary-bg.bg-active,  {
+		padding: rem-calc(map-deep-get($grid-column-gutter, small) );
+		@include breakpoint(large) {
+			// padding: rem-calc(map-deep-get($grid-column-gutter, medium) );
+			padding: rem-calc(map-deep-get($grid-column-gutter, small) );
+		}
+	}
+}

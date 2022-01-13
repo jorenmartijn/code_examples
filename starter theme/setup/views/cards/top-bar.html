@@ -1,0 +1,36 @@
+<div class="description">
+    <h2>Uitleg</h2>
+    <p>
+        Heeft je site een topbar (boven je hoofdmenu)? Bevat deze contactgegevens of een menu?
+        Net als bij de andere modules wordt ook hier, indien nodig, het menu automatisch gegenereerd en toegekend aan de juiste locatie.
+    </p>
+</div>
+
+<div class="fields">
+    <h2>Data</h2>
+    <form method="POST">
+        <fieldset>
+            <input class="large" id="has-top-bar" type="checkbox" name="has-top-bar" value="1" {{#obj.hasTopBar}}checked{{/obj.hasTopBar}}><label for="has-top-bar">Heeft deze site een topbar?</label>
+            <div class="top-bar-fields">
+                <input class="large" id="has-email" type="checkbox" name="has-email" value="1" {{#obj.hasEmail}}checked{{/obj.hasEmail}}><label for="has-email">Heeft deze topbar een e-mailadres?</label><br>
+                <input class="large" id="has-phone" type="checkbox" name="has-phone" value="1" {{#obj.hasPhone}}checked{{/obj.hasPhone}}><label for="has-phone">Heeft deze topbar een telefoonnummer?</label><br>
+                <input class="large" id="has-menu" type="checkbox" name="has-menu" value="1" {{#obj.hasMenu}}checked{{/obj.hasMenu}}><label for="has-menu">Heeft deze topbar een menu?</label>
+                <div class="top-bar-menu-fields">
+                    <label>Diepte van het menu (1 - 3)</label><br>
+                    <input class="large" id="depth" min="1" max="2" type="number" name="depth" placeholder="1" value="{{obj.getDepth}}">
+                    <input class="large" id="arrows" type="checkbox" name="has-arrows" value="1" {{#obj.hasArrows}}checked{{/obj.hasArrows}}><label for="arrows">Heeft dit menu pijltjes in de items met kinderen?</label>
+                </div>
+            </div>
+            <input class="button" type="submit" value="Opslaan">
+        </fieldset>
+    </form>
+</div>
+
+<div class="code">
+    <h2>Code</h2>
+    {{#obj.getCode}}
+    <h4 class="code-header {{#automatic}}automatic{{/automatic}}">{{title}} {{#automatic}}(Automatisch toegevoegd){{/automatic}}</h4>        <pre><code>{{code}}</code></pre>
+    {{/obj.getCode}}
+</div>
+
+

@@ -1,0 +1,68 @@
+{
+    "key": "group_5a93e1a7d7d58",
+    "title": "Variabele Knop",
+    "fields": [
+        {
+            "key": "field_5a93e51884037",
+            "label": "Link",
+            "name": "var_button_link",
+            "type": "link",
+            "instructions": "Klik op de onderstaande knop om de URL en de tekst van de knop in te vullen",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_5a93e53284038",
+            "label": "Kleur",
+            "name": "var_button_color",
+            "type": "select",
+            "instructions": "Kies hier de (voorgedefinieerde) achtergrondkleur die de knop moet krijgen.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "primary": "Primaire kleur",
+                "secondary": "Secundaire kleur",
+                "tertiary": "CTA kleur",
+                "white": "Wit"
+            },
+            "default_value": [
+                "primary"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 0,
+    "description": "",
+    "modified": 1525346293
+}

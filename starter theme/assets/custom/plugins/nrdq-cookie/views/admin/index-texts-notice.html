@@ -1,0 +1,34 @@
+<table class="form-table">
+	<tbody>
+  	<tr>
+      <th scope="row"><label for="cookie_title">Titel</label></th>
+      <td><input name="nrdq_cookie_title" type="text" id="cookie_title" value="{{data.nrdq_cookie_title}}" class="regular-text" placeholder="Cookie instellingen"></td>
+    </tr>
+    <tr>
+      <th scope="row">Uitleg</th>
+      <td>
+        <fieldset>
+          <p><label for="cookie_text">Vul hieronder de tekst in die zichtbaar moet zijn in de cookiemelding. In het geval dat dit veld leeg gelaten wordt zal er een standaard tekst gebruikt worden. </label></p>
+          <div id="nrdq_cookie_text">{{{data.nrdq_cookie_text}}}</div>
+        </fieldset>
+      </td>
+    </tr>
+    {{#nrdq_cookie_is_pro}}
+      <tr>
+        <th scope="row"><label for="cookie_save">Knoptekst "Opslaan"</label></th>
+        <td><input name="nrdq_cookie_save" type="text" id="cookie_save" value="{{data.nrdq_cookie_save}}" class="regular-text" placeholder="Wijzigingen opslaan"></td>
+      </tr> 
+    {{/nrdq_cookie_is_pro}}
+    {{^nrdq_cookie_is_pro}}
+      <tr>
+        <th scope="row"><label for="cookie_allow">Knoptekst "Toestaan"</label></th>
+        <td><input name="nrdq_cookie_allow" type="text" id="cookie_allow" value="{{data.nrdq_cookie_allow}}" class="regular-text" placeholder="Toestaan"></td>
+      </tr>
+      <tr>
+        <th scope="row"><label for="cookie_disallow">Knoptekst "Niet toestaan"</label></th>
+        <td><input name="nrdq_cookie_disallow" type="text" id="cookie_disallow" value="{{data.nrdq_cookie_disallow}}" class="regular-text" placeholder="Niet toestaan"></td>
+      </tr>
+        
+    {{/nrdq_cookie_is_pro}}
+	</tbody>
+</table>

@@ -1,0 +1,9 @@
+/* Plugin admin dashboard CSS */
+
+h2.nrdq_plugin_title {
+	color: red;
+}
+
+#nrdq_cookie_text, #nrdq_cookie_settings_text{
+  background-color: white;
+}

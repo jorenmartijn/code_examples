@@ -1,0 +1,22 @@
+<div class="wrap">
+	<h1>Nordique cookiemelding</h1>
+	{{#notice}}
+	<div class="notice notice-{{notice_type}} is-dismissible">
+	   <p>{{notice_text}}</p>
+	</div>
+	{{/notice}}
+	<form method="post">
+  	<h2 class="nav-tab-wrapper">
+      <a href="?page=nrdq-cookie-notice&tab=settings" class="nav-tab {{#active_tab}}settings{{/active_tab}}">Algemeen</a>
+      {{#nrdq_cookie_is_pro}}
+        <a href="?page=nrdq-cookie-notice&tab=cookie-types" class="nav-tab {{#active_tab}}cookie-types{{/active_tab}}">Cookietypes</a>
+      {{/nrdq_cookie_is_pro}}
+      <a href="?page=nrdq-cookie-notice&tab=texts-notice" class="nav-tab {{#active_tab}}texts-notice{{/active_tab}}">Teksten melding</a>
+      <a href="?page=nrdq-cookie-notice&tab=texts-popup" class="nav-tab {{#active_tab}}texts-popup{{/active_tab}}">Teksten pop-up</a>
+    </h2>
+    
+    {{{content}}}
+  	
+		<p class="submit"><input type="submit" name="submit" id="submit" class="button button-primary" value="Wijzigingen opslaan"></p>
+	</form>
+</div>

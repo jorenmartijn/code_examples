@@ -1,0 +1,32 @@
+<table class="form-table">
+	<tbody>
+  	<tr>
+      <th scope="row"><label for="cookie_settings_title">Titel</label></th>
+      <td><input name="nrdq_cookie_settings_title" type="text" id="cookie_settings_title" value="{{data.nrdq_cookie_settings_title}}" class="regular-text" placeholder="Cookie instellingen"></td>
+    </tr>
+    <tr>
+      <th scope="row">Uitleg </th>
+      <td>
+        <fieldset>
+          <p><label for="cookie_settings_text">Vul hieronder de tekst in die zichtbaar moet zijn in de pop-up voor de cookie instellingen. In het geval dat dit veld leeg gelaten wordt zal er een standaard tekst gebruikt worden. </label></p>
+          <div id="nrdq_cookie_settings_text">{{{data.nrdq_cookie_settings_text}}}</div>
+        </fieldset>
+      </td>
+    </tr>
+
+    {{^nrdq_cookie_is_pro}}
+      <tr>
+        <th scope="row"><label for="cookie_settings_allow">Optie "Toestaan"</label></th>
+        <td><input name="nrdq_cookie_settings_allow" type="text" id="cookie_settings_allow" value="{{data.nrdq_cookie_settings_allow}}" class="regular-text" placeholder="De cookies worden op dit moment toegestaan."></td>
+      </tr>
+      <tr>
+        <th scope="row"><label for="cookie_settings_disallow">Optie "Niet toestaan"</label></th>
+        <td><input name="nrdq_cookie_settings_disallow" type="text" id="cookie_settings_disallow" value="{{data.nrdq_cookie_settings_disallow}}" class="regular-text" placeholder="De cookies worden overal op de site geblokkeerd."></td>
+      </tr>
+    {{/nrdq_cookie_is_pro}}
+      <tr>
+        <th scope="row"><label for="cookie_settings_save">Knoptekst "Opslaan"</label></th>
+        <td><input name="nrdq_cookie_settings_save" type="text" id="cookie_settings_save" value="{{data.nrdq_cookie_settings_save}}" class="regular-text" placeholder="Wijzigingen opslaan"></td>
+      </tr> 
+	</tbody>
+</table>

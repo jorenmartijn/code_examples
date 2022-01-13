@@ -1,0 +1,32 @@
+<div class="description">
+    <h2>Uitleg</h2>
+   <p>
+       Een favicon bundel bestaan vaak uit veel bestanden die allemaal apart van elkaar moeten worden ingeladen.
+       Onderstaand uploadveld maakt dit makkelijk door een zip-bestand te accepteren met daarin alle verschillende favicon-bestanden.
+       Het script zal dit zip-bestand uitpakken op de correcte locatie en de code genereren zodat deze netjes worden ingeladen
+       <br><br>
+       Het zip-bestand kan gegenereerd worden door een afbeelding te uploaden naar <a href="https://realfavicongenerator.net/" target="_blank">https://realfavicongenerator.net/</a><br><br>
+   </p>
+</div>
+
+<div class="fields">
+    <h2>Data</h2>
+    <form method="POST" enctype="multipart/form-data">
+        <fieldset>
+            <label for="favicon">Upload een zipbestand:</label>
+            <input class="large no-mar" id="favicon" type="file" name="favicon" required>
+            <p class="description">Upload een zipbestand met daarin de favicon bestanden. Deze kan gegenereerd worden via <a href="https://realfavicongenerator.net/" target="_blank">https://realfavicongenerator.net/</a></p>
+            <input class="button" type="submit" value="Opslaan">
+        </fieldset>
+    </form>
+</div>
+
+<div class="code">
+    <h2>Code</h2>
+    {{#obj.getCode}}
+    <h4 class="code-header {{#automatic}}automatic{{/automatic}}">{{title}} {{#automatic}}(Automatisch toegevoegd){{/automatic}}</h4>
+        <pre><code>{{code}}</code></pre>
+    {{/obj.getCode}}
+</div>
+
+

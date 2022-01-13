@@ -1,0 +1,30 @@
+<div class="description">
+    <h2>Uitleg</h2>
+   <p>
+       Heeft je site een socket (onder de footer)? Bevat deze een copyright melding of een menu?
+       Net als bij de andere modules wordt ook hier, indien nodig, het menu automatisch gegenereerd en toegekend aan de juiste locatie.
+   </p>
+</div>
+
+<div class="fields">
+    <h2>Data</h2>
+    <form method="POST">
+        <fieldset>
+            <input class="large" id="has-socket" type="checkbox" name="has-socket" value="1" {{#obj.hasSocket}}checked{{/obj.hasSocket}}><label for="has-socket">Heeft deze site een socket?</label>
+            <div class="socket-fields">
+                <input class="large" id="has-copyright" type="checkbox" name="has-copyright" value="1" {{#obj.hasCopyright}}checked{{/obj.hasCopyright}}><label for="has-copyright">Heeft deze socket een copyrightmelding?</label><br>
+                <input class="large" id="has-menu" type="checkbox" name="has-menu" value="1" {{#obj.hasMenu}}checked{{/obj.hasMenu}}><label for="has-menu">Heeft deze socket een menu?</label>
+            </div>
+            <input class="button" type="submit" value="Opslaan">
+        </fieldset>
+    </form>
+</div>
+
+<div class="code">
+    <h2>Code</h2>
+    {{#obj.getCode}}
+    <h4 class="code-header {{#automatic}}automatic{{/automatic}}">{{title}} {{#automatic}}(Automatisch toegevoegd){{/automatic}}</h4>        <pre><code>{{code}}</code></pre>
+    {{/obj.getCode}}
+</div>
+
+

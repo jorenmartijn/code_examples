@@ -1,0 +1,29 @@
+<div class="description">
+    <h2>Uitleg</h2>
+   <p>
+       Er wordt tegenwoordig veel gebruik gemaakt van sliders binnen sites. Wij gebruiken als standaard library voor sliders 'Slick Slider'.
+       Deze slider library zit standaard bij het basisproject. Hieronder vind je een aantal voorbeelden van deze slider,
+       die rechtstreeks naar de code gekopieerd kunnen worden.
+       <br><br>
+       Zie voor meer informatie de site van <a href="https://kenwheeler.github.io/slick/", target="_blank">Slick Slider</a>.
+   </p>
+</div>
+
+<div class="fields">
+    <h2>Data</h2>
+    <form method="POST">
+        <fieldset>
+            <input class="large" id="has_slider" type="checkbox" name="has_slider" value="1" {{#obj.hasSlider}}checked{{/obj.hasSlider}}><label for="has_slider">Is er een slider op deze site?</label>
+            <input class="button" type="submit" value="Opslaan">
+        </fieldset>
+    </form>
+</div>
+
+<div class="code">
+    <h2>Code</h2>
+    {{#obj.getCode}}
+    <h4 class="code-header {{#automatic}}automatic{{/automatic}}">{{title}} {{#automatic}}(Automatisch toegevoegd){{/automatic}}</h4>        <pre><code>{{code}}</code></pre>
+    {{/obj.getCode}}
+</div>
+
+

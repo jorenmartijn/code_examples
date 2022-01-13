@@ -1,0 +1,32 @@
+<div id="nrdq-cookie-notice" class="is-pro cookie__section {{position}}">
+	<div class="cookie__row">
+		<div class="cookie__column left">
+			<div class="cookie__content-wrap">
+  			<h2>{{title}}</h2>
+				{{{text}}}
+			</div>
+		</div>
+		<div class="cookie__column right">
+			<div class="cookie__button-group align-center">
+  			 <div id="nrdq-cookie-notice-form">
+          <input type="hidden" class="nonce" value="{{nonce}}" />
+
+          <ul id="cookie-check" class="cookie__types {{#cant_refuse}}hidden{{/cant_refuse}}">
+            <li>
+			      	<input id="check_idx_1" name="check_idx_1" class="" type="checkbox" disabled><label for="check_idx_1">
+			      	<span class="title">Functionele cookies</span></label>
+					  </li>
+            {{#cookie_types}}
+              <li>
+  			      	<input id="{{value}}" name="{{value}}" class="" type="checkbox" checked><label for="{{value}}">
+  			      	<span class="title">{{label}}</span></label>
+  					  </li>
+            {{/cookie_types}}
+				  </ul>
+
+          <a href="javascript:;" class="action cookie__btn primary" target="_self" data-level="10" title="{{button_save_text}}">{{button_save_text}}</a>
+        </div>
+			</div>
+		</div>
+	</div>
+</div>

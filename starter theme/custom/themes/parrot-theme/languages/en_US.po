@@ -1,0 +1,216 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Parrot theme\n"
+"POT-Creation-Date: 2020-10-13 08:46+0200\n"
+"PO-Revision-Date: 2020-10-13 09:06+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.1\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: style.css\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+
+#: 404.php:8
+msgid "Pagina niet gevonden"
+msgstr "Page not found"
+
+#: 404.php:9
+#, fuzzy
+msgid "Excuses, de pagina die je hebt opgevraagd bestaat niet (meer)."
+msgstr "Apologies, the page you requested doesn't exist (anymore)."
+
+#: 404.php:10
+msgid "En nu?"
+msgstr "What happens now?"
+
+#: 404.php:12
+msgid "Als je het URL zelf in hebt getypt: controleer je spelling"
+msgstr "If you typed in the URL yourself: please check your spelling"
+
+#: 404.php:13
+#, fuzzy, php-format
+msgid "Ga terug naar de <a href=\"%s\">startpagina</a>"
+msgstr "Go back to the <a href=\"%s\">home page</a>"
+
+#: 404.php:14
+#, fuzzy
+msgid ""
+"Ga <a href=\"javascript:history.back()\">terug</a> naar de vorige pagina"
+msgstr ""
+"Go <a href=\"javascript:history.back()\">back</a> to the previous page"
+
+#: footer.php:89
+msgid "Privacyverklaring"
+msgstr "Privacy statement"
+
+#: functions/admin.php:50 functions/admin.php:51
+#, fuzzy
+msgid "Algemene opties"
+msgstr "General options"
+
+#: functions/admin.php:237
+#, fuzzy
+msgid "Formulieren"
+msgstr "Forms"
+
+#: functions/admin.php:379
+msgid "Pagina template"
+msgstr "Page template"
+
+#: functions/cleanup.php:39
+#, fuzzy
+msgid "No feed available,please visit our <a href=\""
+msgstr "No feed available,please visit our <a href=\""
+
+#: functions/helpers.php:142
+msgid "Meer informatie"
+msgstr "More information"
+
+#: functions/theme.php:46
+#, fuzzy
+msgid "Hoofdmenu"
+msgstr "Main menu"
+
+#: functions/theme.php:47
+#, fuzzy
+msgid "Topmenu"
+msgstr "Top menu"
+
+#: functions/theme.php:48
+#, fuzzy
+msgid "Footermenu"
+msgstr "Footermenu"
+
+#: functions/theme.php:49
+#, fuzzy
+msgid "Tweede Footermenu"
+msgstr "Second Footer menu"
+
+#: functions/theme.php:94
+#, fuzzy
+msgid "Add to Menu"
+msgstr "Add to Menu"
+
+#: functions/theme.php:131
+#, fuzzy
+msgid "Pagina sidebar"
+msgstr "Page sidebar"
+
+#: functions/theme.php:132
+#, fuzzy
+msgid "Dit is de standaard sidebar."
+msgstr "This is the standard sidebar."
+
+#: functions/theme.php:157
+#, fuzzy
+msgid "Content widget"
+msgstr "Content widget"
+
+#: functions/theme.php:159
+#, fuzzy
+msgid "Een widget met dynamische content"
+msgstr "A dynamic content widget"
+
+#: functions/theme.php:188
+#, fuzzy
+msgid "Call to Action widget"
+msgstr "Call to Action widget"
+
+#: functions/theme.php:190
+#, fuzzy
+msgid "Een widget waarin een Call to Action geplaatst kan worden."
+msgstr "A widget in which a Call to Action can be placed."
+
+#: header.php:97 includes/content/flexible-content/fc-contact.php:40
+#: includes/content/flexible-content/fc-contact.php:41
+#, fuzzy
+msgid "Bel:"
+msgstr "Call:"
+
+#: includes/content/flexible-content/fc-cards.php:53 index.php:39
+#, fuzzy
+msgid "Bericht bekijken"
+msgstr "View message"
+
+#: includes/content/flexible-content/fc-contact.php:21
+msgid "Contactgegevens"
+msgstr "Contact information"
+
+#: includes/content/flexible-content/fc-contact.php:42
+#, fuzzy
+msgid "E-mail:"
+msgstr "E‑mail:"
+
+#: includes/content/flexible-content/fc-contact.php:59
+msgid "KvK:"
+msgstr "KvK:"
+
+#: includes/content/flexible-content/fc-contact.php:60
+msgid "BTW:"
+msgstr "VAT:"
+
+#: includes/content/flexible-content/fc-contact.php:76
+#, fuzzy
+msgid "Openingstijden"
+msgstr "Opening hours"
+
+#: includes/content/flexible-content/fc-image-or-video.php:45
+#, fuzzy
+msgid "Video afspelen"
+msgstr "Play Video"
+
+#: includes/content/search-form.php:3
+#, fuzzy
+msgid "Zoeken…"
+msgstr "Search..."
+
+#: includes/nav/desktop-top-nav.php:25
+msgid "E-mail"
+msgstr "Email"
+
+#: includes/nav/desktop-top-nav.php:26
+#, fuzzy
+msgid "Bel"
+msgstr "Call"
+
+#: index.php:53
+msgid "Vorige"
+msgstr "Previous"
+
+#: index.php:54
+msgid "Volgende"
+msgstr "Next"
+
+#: search.php:9
+msgid "Gevonden zoekresultaten voor "
+msgstr "Search results found for "
+
+#. Theme Name of the plugin/theme
+#, fuzzy
+msgid "Parrot theme"
+msgstr "Parrot theme"
+
+#. Description of the plugin/theme
+msgid "Parrot theme by Nordique"
+msgstr "Parrot theme by Nordique"
+
+#. Author of the plugin/theme
+#, fuzzy
+msgid "Nordique"
+msgstr "Nordique"
+
+#. Author URI of the plugin/theme
+#, fuzzy
+msgid "https://www.nordique.nl"
+msgstr "https://www.nordique.nl"

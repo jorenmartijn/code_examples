@@ -1,0 +1,39 @@
+.nav-links {
+	span.page-numbers.current,
+	a.page-numbers:not(.next):not(.prev) {
+		@extend %transition;
+		display: inline-block;
+		margin-right: rem-calc(15);
+		width: rem-calc(35);
+		height: rem-calc(35);
+		line-height: 33px;
+		text-decoration: none;
+		border-radius: $global-radius;
+		text-align: center;		
+		border: rem-calc(1) solid $primary-color;
+		color: $primary-color;
+		font-family: $header-font-family;
+		&:hover {
+			background-color: $primary-color;
+			color: $white;
+		}
+	}
+	span.page-numbers.current {
+		background-color: $primary-color;
+		font-weight: bold;
+		color: $white;
+	}
+	a {
+		text-decoration: none;
+		outline: 0;
+		&:last-child {
+			margin-right: 0;
+		}
+		&.prev {
+			margin-right: rem-calc(15);
+		}
+		&.next {
+			// margin-left: rem-calc(16);
+		}
+	}
+}

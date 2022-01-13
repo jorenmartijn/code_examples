@@ -1,0 +1,179 @@
+<div class="wrap lock_staging">
+	<h1>Nordique Lock Staging</h1>
+	{{#notice}}
+	<div class="notice notice-{{notice_type}} is-dismissible">
+	   <p>{{notice_text}}   
+	   </p>   
+	</div>
+	{{/notice}}	
+	<form name="nrdq_post_type" id="lock_form" method="post">
+		<div id="poststuff">
+			<div id="post-body" class="metabox-holder columns-2">
+				<div id="post-body-content">
+					{{#data.locked}}<div class="overlay"></div>{{/data.locked}}
+					<table class="wp-list-table widefat fixed">
+						<thead>
+							<tr>
+								<th scope="col" class="manage-column column-title column-primary">
+									<span><strong>Stap 1: </strong>Kies het lock type en stel de uitzonderingen in</span>
+								</th>
+			
+							</tr>
+						</thead>
+						<tbody class="the-list">
+							<tr>
+								<td class="labels column-labels">
+									<table class="wp-list-table widefat fixed">
+										<thead>
+											<tr>
+												<th scope="col" class="manage-column column-title column-primary">
+													<span>Lock Type</span>
+												</th>
+												<th scope="col" class="manage-column column-status">
+													<span>Uitzonderingen</span>
+												</th>
+											</tr>
+										</thead>
+										<tbody class="the-list">
+											<tr class="iedit author-self level-0 post-8 type-page status-publish hentry">
+												<td class="ip-lock column-ip-lock">
+													<span><input type="radio" name="lock_type" value="ip_lock" {{#lock.ip_lock}}checked{{/lock.ip_lock}}> IP Lock (Huidig IP: {{current_ip}})</span>
+													<div class="lock_explanation">
+														<p class="description">
+															Met het IP lock wordt het dashboard gelocked voor alle IP adressen behalve voor de hiernaast ingegeven <strong>uitzonderingen</strong> (gescheiden door een komma).
+														</p>
+													</div>
+												</td>
+												<td class="ip-lock column-ip-lock">
+													<textarea class="exceptions" placeholder="127.0.0.1, 127.0.0.2" name="ip_lock_exceptions">{{lock.ip_lock_exceptions}}</textarea>
+												</td>
+											</tr>
+											<tr class="iedit author-self level-0 post-8 type-page status-publish hentry">
+												<td class="role-lock column-role-lock">
+													<span><input type="radio" name="lock_type" value="role_lock" {{#lock.role_lock}}checked{{/lock.role_lock}}> Gebruikersrol Lock</span>
+													<div class="lock_explanation">
+														<p class="description">
+															Met het gebruikersrol lock wordt het dashboard gelocked voor alle gebruikersrollen behalve voor de hiernaast geselecteerde <strong>uitzonderingen</strong>.
+														</p>
+													</div>
+												</td>
+												<td class="role-lock column-role-lock">
+													<select id="role_lock_select" class="exceptions" multiple name="role_lock_exceptions[]">
+														{{#user_roles}}
+														<option value="{{role}}" {{#selected}}selected{{/selected}}>{{name}}</option>												
+														{{/user_roles}}
+													</select>
+												</td>
+											</tr>
+											<tr class="iedit author-self level-0 post-8 type-page status-publish hentry">
+												<td class="user-lock column-user-lock">
+													<span><input type="radio" name="lock_type" value="user_lock" {{#lock.user_lock}}checked{{/lock.user_lock}}> Gebruikers Lock</span>
+													<div class="lock_explanation">
+														<p class="description">
+															Met het gebruikers lock wordt het dashboard gelocked voor alle gebruikersrollen behalve voor de hiernaast geselecteerde <strong>uitzonderingen</strong>.
+														</p>
+													</div>
+												</td>
+												<td class="user-lock column-user-lock">
+													<select id="user_lock_select" class="exceptions" multiple name="user_lock_exceptions[]">
+														{{#users}}
+															<option value="{{ID}}" {{#selected}}selected{{/selected}}>{{user_login}} ({{user_nicename}})</option>												
+														{{/users}}
+													</select>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</td>
+								
+							</tr>
+						</tbody>
+					</table>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					<table class="wp-list-table widefat fixed">
+						<thead>
+							<tr>
+								<th scope="col" class="manage-column column-status">
+									<span><strong>Stap 2: </strong>Vul hier de tekst in die zichtbaar moet zijn op de lock pagina</span>
+								</th>
+							</tr>
+						</thead>
+						<tbody class="the-list">
+							<tr>
+								<td class="fields column-fields">
+									<textarea class="lock_content" name="lock_content">{{{lock_content}}}</textarea> 
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					
+					<table class="wp-list-table widefat fixed">
+						<thead>
+							<tr>
+								<th scope="col" class="manage-column column-status">
+									<span><strong>Stap 3: </strong>Vul hier de tekst in die zichtbaar moet zijn als waarschuwing in de front-end</span>
+								</th>
+							</tr>
+						</thead>
+						<tbody class="the-list">
+							<tr>
+								<td class="fields column-fields">
+									<textarea class="lock_content" name="lock_bar_content">{{{lock_bar_content}}}</textarea> 
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					
+					
+					
+				</div>
+				<div id="postbox-container-1" class="postbox-container">
+					<div id="submitdiv" class="postbox">
+						<h2>Stap 4: Sla de wijzingen op en lock staging</h2>
+						<div class="inside">
+							<div class="submitbox" id="submitpost">
+								<div id="minor-publishing">
+									<div id="misc-publishing-actions">
+										<div class="misc-pub-section misc-pub-post-status">
+											<label for="post_status">Status:</label>
+											<span id="post-status-display">{{#data.locked}}Locked{{/data.locked}}{{^data.locked}}Unlocked{{/data.locked}}</span>							
+									    </div>
+									</div>
+									<div class="misc-pub-section misc-pub-visibility" id="visibility">
+    									<label for="visibility-check">Balk zichtbaar:   <input id="visibility-check" type="checkbox" name="NRDQ_LockStaging_visibility" value="Yes" {{#show_bar}}checked{{/show_bar}}></label>
+									</div>
+									<div class="clear"></div>
+								</div>
+								
+								<div id="major-publishing-actions">
+									<div id="publishing-action">
+										<span class="spinner"></span>
+										<input name="save" type="submit" class="button button-primary button-large" id="publish" {{^data.locked}}value="Lock"{{/data.locked}}{{#data.locked}}value="Unlock"{{/data.locked}}>
+									</div>
+									<div class="clear"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>

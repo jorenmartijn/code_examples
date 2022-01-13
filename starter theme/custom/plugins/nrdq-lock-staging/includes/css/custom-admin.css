@@ -1,0 +1,39 @@
+/* Plugin admin dashboard CSS */
+
+.lock_staging table {
+	margin-bottom: 25px;
+}
+
+.lock_staging textarea {
+	width: 100%;
+}
+
+.lock_staging textarea.lock_content {
+	min-height: 6rem;
+}
+
+.lock_staging .lock_explanation {
+	display: none;
+}
+
+.lock_staging .exceptions {
+	display: none;
+	width: 100%;
+}
+
+.lock_staging #post-body-content {
+	position: relative;
+}
+
+.lock_staging .overlay {
+	position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color:#000;
+  opacity: .25;
+  z-index: 9999999;
+}
+
+

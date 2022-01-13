@@ -1,0 +1,32 @@
+<div class="wrap">
+	<h1>Nordique Limiteer Media Upload Grootte</h1>
+	{{#notice}}
+	<div class="notice notice-{{notice_type}} is-dismissible">
+	   <p>{{notice_text}}</p>
+	</div>
+	{{/notice}}
+	<form method="post">
+		<table class="form-table">
+			<tbody>
+				<tr>
+					<th scope="row"><label for="upload_size">Media Maximale Upload Grootte</label></th>
+					<td><input name="NRDQ_LimitUploadSize_size" type="number" id="upload_size" value="{{current_size}}" class="small-text"> MB</td>
+				</tr>	
+				<tr>
+					<th scope="row"><label for="upload_dimensions">Media Maximale Upload Afmetingen (breedte x hoogte)</label></th>
+					<td><input name="NRDQ_LimitUploadSize_dimensions_width" type="number" id="upload_dimensions" value="{{current_dimensions_width}}" class="small-text"> x <input name="NRDQ_LimitUploadSize_dimensions_height" type="number" id="upload_dimensions" value="{{current_dimensions_height}}" class="small-text">				
+						<p class="description">Laat deze velden leeg als er geen maximale afmetingen zijn.</p>
+					</td>			
+				</tr>	
+				<tr>
+					<th scope="row"><label for="upload_filetypes">Media Toegestane Bestandstypes</label></th>
+					<td>
+						<input name="NRDQ_LimitUploadSize_types" type="text" id="upload_filetypes" value="{{current_types}}" placeholder="svg, psd, mkv" class="regular-text">
+						<p class="description">De standaard toegestane bestandstypen hoeven hier niet ingevuld te worden. Klik <a href="https://en.support.wordpress.com/accepted-filetypes/" target="_blank">hier</a> om de lijst met de standaard toegestane bestandstypes te bekijken. Scheid de bestandstypes met een komma. Laat dit veld leeg als er geen extra bestandstypen toegevoegd hoeven worden.</p>
+					</td>
+				</tr>				
+			</tbody>
+		</table>
+		<p class="submit"><input type="submit" name="submit" id="submit" class="button button-primary" value="Wijzigingen opslaan"></p>
+	</form>	
+</div>

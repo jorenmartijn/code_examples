@@ -1,0 +1,219 @@
+#header {
+	display: block;
+	.header-wrap {
+		background-color: $white;
+		padding: rem-calc(8 0);
+		border-top: rem-calc(4) solid $primary-color;
+		box-shadow: 0 0 10px 1px rgba(0,0,0,0.02);
+		@include breakpoint(large) {
+			// position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+			max-width: calc(1280px + 185px);
+			width: 100%;
+			padding: rem-calc(20 0 );
+			border-top-width: rem-calc(10);
+			.logged-in & {
+				top: rem-calc(32);
+			}
+		}
+		@include breakpoint(1380) {
+			padding: rem-calc(20 $gutter-medium);
+		}
+		@include breakpoint(1465) {
+			position: absolute;
+			border-radius: 0 0 $global-radius $global-radius;
+		}
+
+		.desktop-navigation .row {
+			position: relative;
+
+			.desktop__searchform {
+				position: absolute;
+				top: rem-calc(38);
+				right: rem-calc(15);
+				@media screen and (max-width: 1440px) {
+					right: rem-calc(25);
+				}
+				@media screen and (min-width: 1440px) {
+					right: 0;
+				}
+				@media screen and (min-width: 1530px) {
+					right: rem-calc(-25);
+				}
+			}
+		}
+
+		// top navigation settings
+		// -----------------------
+		&.has-top-nav {
+			@include breakpoint(large) {
+				padding-top: rem-calc(52);
+			}
+		}
+	}
+	.brand {
+		a {
+			display: block;
+			text-decoration: none;
+			figure {
+				width: rem-calc(150);
+				@include breakpoint(large) {
+					width: rem-calc(200);
+				}
+				@include breakpoint(1160) {
+					width: rem-calc(250);
+				}
+				img {
+					width: 100%;
+				}
+			}
+			.logo-placeholder {
+				background-color: $light-gray;
+				padding: rem-calc(20 30);
+				border-radius: $global-radius;
+				display: inline-block;
+				font-weight: bold;
+				font-size: rem-calc(map-deep-get($header-styles, medium, h3, font-size));
+			}
+		}
+	}
+	ul.contact-list {
+		display: inline-block;
+		li {
+			display: inline-block;
+			margin-left: rem-calc(20);
+			a {
+				color: $black;
+				text-decoration: none;
+			}
+			i {
+				position: relative;
+				top: rem-calc(1);
+				color: $tertiary;
+			}
+		}
+	}
+	.nav-cta {
+		font-size: $font-size-12;
+		position: relative;
+		top: rem-calc(-6);
+		text-align: center;
+		overflow: hidden;
+		min-width: auto;
+
+		@include breakpoint(xlarge down) {
+			min-width: auto;
+			padding: rem-calc(10 20 10 20);
+			top: rem-calc(-10);
+			margin-right: rem-calc(20);
+			&:after {
+				display: none;
+			}
+		}
+		@include breakpoint(1100) {
+			font-size: $font-size-12;
+		}
+
+		@media screen and (max-width: 1440px) {
+			line-height: 30px;
+			height: 50px;
+		}
+		@media screen and (max-width: 1530px) {
+			left: rem-calc(-25);
+		}
+		@include breakpoint(xxlarge) {
+			text-align: left;
+			font-size: $font-size-16;
+			top: rem-calc(-10);
+			margin-left: rem-calc(15);
+			margin-right: rem-calc(15);
+
+			&:after {
+				font-size: rem-calc(13);
+			}
+		}
+	}
+
+
+	// sticky header
+	//--------------
+	&.sticky-header {
+
+		.header-wrap {
+			margin-top: -100%;
+			animation: sticky-slide-in .6s forwards;
+
+			position: fixed;
+			max-width: none;
+			border-top: none;
+			top: 0;
+			width: 100%;
+			z-index: 999;
+			box-shadow: $card-shadow;
+			padding: rem-calc(8 0); // Less padding-top because of border.
+			.logged-in & {
+				@include breakpoint(600) {
+					top: rem-calc(46);
+				}
+				@include breakpoint(783) {
+					top: rem-calc(32);
+				}
+			}
+
+			@include breakpoint(large) {
+				padding: rem-calc(10 0 );
+			}
+			@include breakpoint(1380) {
+				padding: rem-calc(10 $gutter-medium);
+			}
+
+			.desktop-navigation .row {
+				position: relative;
+
+				.desktop__searchform {
+					position: absolute;
+					top: rem-calc(20);
+					right: rem-calc(15);
+					@media screen and (max-width: 1440px) {
+						right: rem-calc(25);
+					}
+					@media screen and (min-width: 1440px) {
+						right: 0;
+					}
+					@media screen and (min-width: 1530px) {
+						right: rem-calc(-25);
+					}
+				}
+			}
+
+			.brand {
+				a {
+					figure {
+						@include breakpoint(large) {
+							width: rem-calc(160);
+						}
+						@include breakpoint(1160) {
+							width: rem-calc(210);
+						}
+					}
+				}
+			}
+
+			.desktop-navigation {
+				div.top-row {
+					display: none;
+				}
+				#desktop-menu, .nav-cta {
+					margin-top: 0;
+				}
+			}
+		}
+	}
+}
+
+@keyframes sticky-slide-in {
+  to { margin-top: 0; }
+}

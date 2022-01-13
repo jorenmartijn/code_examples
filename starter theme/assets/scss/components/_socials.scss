@@ -1,0 +1,63 @@
+// // default socials ul
+// .socials {
+//   margin: .5rem 0 0;
+//   list-style: none;
+//   @include grid-column(48,0);
+//
+//   li {
+//     float: left;
+//
+//     &.facebook {
+//       a {
+//         background: $facebook;
+//       }
+//     }
+//
+//     &.twitter {
+//       a {
+//         background: $twitter;
+//       }
+//     }
+//
+//     &.linkedin {
+//       a {
+//         background: $linkedin;
+//       }
+//     }
+//
+//     &.google-plus {
+//       a {
+//         background: $google-plus;
+//       }
+//     }
+//
+//     a {
+//       background: $primary-color;
+//       text-decoration: none;
+//       width: 2.5rem;
+//       height: 2.5rem;
+//       border-radius: 50%;
+//       display: block;
+//       overflow: hidden;
+//       text-align: center;
+//       line-height: 2.5rem;
+//       margin-right: .5rem;
+//       @extend %transition;
+//
+//       i {
+//         color: $white;
+//         font-size: 1.2rem;
+//       }
+//
+//       &:hover {
+//         opacity: .8;
+//       }
+//     }
+//
+//     &:last-child {
+//       a {
+//         margin-right: 0;
+//       }
+//     }
+//   }
+// }

@@ -1,0 +1,40 @@
+<div class="description">
+    <h2>Uitleg</h2>
+   <p>
+       Hieronder kun je de opties van het hoofdmenu aangeven. Wat is de maximale diepte van het menu. Bevat het een megamenu?
+       Wat is het type en de weergave van het mobiele menu? Het menu zal automatisch gegenereerd worden en daardoor ook toegevoegd aan de site.
+   </p>
+</div>
+
+<div class="fields">
+    <h2>Data</h2>
+    <form method="POST">
+        <fieldset>
+            <label>Diepte van het menu (1 - 3)</label><br>
+            <input class="large" id="depth" min="1" max="3" type="number" required name="depth" placeholder="2" value="{{obj.getDepth}}">
+            <input class="large" id="mega-menu" type="checkbox" name="mega-menu" value="1" {{#obj.hasMegaMenu}}checked{{/obj.hasMegaMenu}}><label for="mega-menu">Is (een gedeelte van) dit menu een Megamenu?</label>
+            <label for="type-menu">Type menu (mobiel)</label>
+            <select name="type-menu" id="type-menu">
+                <option value="drilldown" {{#obj.isDrilldown}}selected{{/obj.isDrilldown}}>Drilldown menu</option>
+                <option value="accordion" {{#obj.isAccordion}}selected{{/obj.isAccordion}}>Accordeon menu</option>
+            </select>
+            <label for="type-view">Type weergave (mobiel)</label>
+            <select name="type-view" id="type-view">
+                <option value="offcanvas" {{#obj.isOffCanvas}}selected{{/obj.isOffCanvas}}>Offcanvas menu</option>
+                <option value="overlay" {{#obj.isOverlay}}selected{{/obj.isOverlay}}>Overlay menu</option>
+            </select>
+            <input class="large" id="arrows" type="checkbox" name="arrows" value="1" {{#obj.hasArrows}}checked{{/obj.hasArrows}}><label for="arrows">Heeft dit menu pijltjes in de items met kinderen?</label><br>
+            <input class="large" id="has-search" type="checkbox" name="has-search" value="1" {{#obj.hasSearch}}checked{{/obj.hasSearch}}><label for="has-search">Heeft dit menu een zoekfunctionaliteit?</label>
+            <input class="button" type="submit" value="Opslaan">
+        </fieldset>
+    </form>
+</div>
+
+<div class="code">
+    <h2>Code</h2>
+    {{#obj.getCode}}
+    <h4 class="code-header {{#automatic}}automatic{{/automatic}}">{{title}} {{#automatic}}(Automatisch toegevoegd){{/automatic}}</h4>        <pre><code>{{code}}</code></pre>
+    {{/obj.getCode}}
+</div>
+
+

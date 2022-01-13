@@ -1,0 +1,79 @@
+// variables
+// --------
+
+  // font-sizes
+  $font-size-10: rem-calc(10);
+	$font-size-11: rem-calc(11);
+	$font-size-12: rem-calc(12);
+	$font-size-13: rem-calc(13);
+	$font-size-14: rem-calc(14);
+	$font-size-15: rem-calc(15);
+	$font-size-16: rem-calc(16);
+	$font-size-17: rem-calc(17);
+	$font-size-18: rem-calc(18);
+	$font-size-19: rem-calc(19);
+	$font-size-20: rem-calc(20);
+	$font-size-21: rem-calc(21);
+	$font-size-22: rem-calc(22);
+	$font-size-23: rem-calc(23);
+	$font-size-24: rem-calc(24);
+	$font-size-25: rem-calc(25);
+	$font-size-26: rem-calc(26);
+	$font-size-27: rem-calc(27);
+	$font-size-28: rem-calc(28);
+	$font-size-29: rem-calc(29);
+	$font-size-30: rem-calc(30);
+  $font-size-40: rem-calc(40);
+  $font-size-50: rem-calc(50);
+
+  // social-colors
+  $twitter: #14c5f9;
+  $facebook: #3a5799;
+  $instagram: #696a6a;
+  $linkedin: #006bc3;
+  $google-plus: #dd4b39;
+  $whatsapp: #64bd50;
+  $snapchat: #fde20d;
+  $youtube: #ff0000;
+  $pinterest: #bd081c;
+  $instagram: #833ab4;
+  $vimeo: #1ab7ea;
+  $skype: #00aff0;
+
+	$tertiary-color: $tertiary;
+
+	$primary-light: lighten($primary-color, 0%);
+	$secondary-light: lighten($secondary-color, 20%);
+	$tertiary-light: lighten($tertiary-color, 40%);
+
+
+// extends
+// ------
+%transition {
+  transition: all .2s ease-in-out;
+}
+%noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+
+
+// keyframes
+// ------
+
+@keyframes slideIn {
+	from {
+		opacity: 0;
+		transform: translateY(50px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+
+	}
+}

@@ -1,0 +1,19 @@
+<div id="nrdq-cookie-notice" class="cookie__section {{position}}" {{#ajax}}style="display:none;"{{/ajax}}>
+	<div class="cookie__row">
+		<div class="cookie__column left">
+			<div class="cookie__content-wrap">
+  			<h2>{{title}}</h2>
+				{{{text}}}
+			</div>
+		</div>
+		<div class="cookie__column right">
+			<div class="cookie__button-group align-center">
+  			 <div id="nrdq-cookie-notice-form">
+          <input type="hidden" class="nonce" value="{{nonce}}" />
+          <a href="javascript:;" class="action cookie__btn primary" target="_self" data-level="10" title="{{button_accept_text}}">{{button_accept_text}}</a>
+          <a href="javascript:;" class="action cookie__btn {{#cant_refuse}}hidden{{/cant_refuse}}{{^cant_refuse}}tertiary{{/cant_refuse}}" target="_self" data-level="0" title="{{button_not_accept_text}}">{{button_not_accept_text}}</a>
+        </div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,89 @@
+<div class="description">
+    <h2>Uitleg</h2>
+   <p>
+       Hieronder kun je opgeven wat voor posttypes de site bevat. Een aantal standaard instellingen kunnen hierbij opgegeven worden,
+       waarna de code automatisch gegenereerd wordt en toegevoegd aan de site.
+       <br><br>
+       Ook wordt er indien nodig automatisch een archief, card en single bestand gegenereerd met daarin een basis voor wat je nodig
+       hebt om de site verder op te bouwen. Alle paginatie werkt ook out of the box.
+       <br><br>
+       <span class="important">Let op: Als je dit uitvoert terwijl je zelf aanpassingen gedaan hebt in de archieven, cards en singles zullen
+       die wijzigingen worden overschreven.</span>
+   </p>
+</div>
+
+<div class="fields">
+    <h2>Data</h2>
+    <form method="POST">
+        <fieldset>
+            <div class="post-type-container">
+                {{#obj.getAllPostTypes}}
+                    <a class="accordion">{{type-name-singular}}</a><span class="accordion-trash"> <i class="fas fa-trash-alt"></i></span>
+                    <div class="panel">
+                        <label>Naam enkelvoud</label><br>
+                        <input class="large" type="text" name="type-name-singular-{{type-idx}}" placeholder="Naam enkelvoud" value="{{type-name-singular}}" required>
+                        <label>Naam meervoud (en slug)</label><br>
+                        <input class="large" type="text" name="type-name-plural-{{type-idx}}" placeholder="Naam meervoud" value="{{type-name-plural}}" required>
+                        <input class="large" id="type-add-e-{{type-idx}}" type="checkbox" name="type-add-e-{{type-idx}}" value="1" {{#type-add-e}}checked{{/type-add-e}}><label for="type-add-e-{{type-idx}}">Buigings-e (nieuw of nieuwe)?</label>
+                        <label>Dashicon class</label><br>
+                        <input class="large no-mar" type="text" name="type-dashicon-{{type-idx}}" placeholder="Dashicon" value="{{type-dashicon}}">
+                        <p class="description">Klik <a href="https://developer.wordpress.org/resource/dashicons" target="_blank">hier</a> voor alle dashicons.</p>
+                        <input class="large" id="type-has-archive-{{type-idx}}" type="checkbox" name="type-has-archive-{{type-idx}}" value="1" {{#type-has-archive}}checked{{/type-has-archive}}><label for="type-has-archive-{{type-idx}}">Is er een archive?</label><br>
+                        <input class="large no-mar" id="type-is-hierarchical-{{type-idx}}" type="checkbox" name="type-is-hierarchical-{{type-idx}}" value="1" {{#type-is-hierarchical}}checked{{/type-is-hierarchical}}><label for="type-is-hierarchical-{{type-idx}}">Is dit post type hiërarchisch?</label>
+                        <p class="description">Kan je een post toewijzen aan een hoofd (parent/child posts)?</p>
+                        <label>Rewrite</label><br>
+                        <input class="large no-mar" type="text" name="type-rewrite-{{type-idx}}" placeholder="Post type rewrite" value="{{type-rewrite}}">
+                        <p class="description">Moet de standaard slug gebruikt worden in de URL of moet er een aangepaste url gebruikt worden?</p>
+                        <label>Naam positie (waarde/integer)</label><br>
+                        <input class="large" type="text" name="type-position-{{type-idx}}" placeholder="Menu position" value="{{type-position}}">
+                        <label>Type paginatie</label><br>
+                        <select name="type-pagination-{{type-idx}}" id="type-pagination-{{type-idx}}">
+                            <option value="no-pagination" {{#no-pagination}}selected{{/no-pagination}}>Geen paginatie (toon alle posts)</option>
+                            <option value="default-pagination" {{#default-pagination}}selected{{/default-pagination}}>Standaard paginatie (pagina nummers)</option>
+                            <option value="ajax-pagination" {{#ajax-pagination}}selected{{/ajax-pagination}}>AJAX paginatie (laad meer posts)</option>
+                        </select>
+                    </div>
+                {{/obj.getAllPostTypes}}
+            </div>
+            <a class="button full-width" id="add-post-type" href="javascript:">+ Voeg post type toe</a>
+            <input class="button" type="submit" value="Opslaan">
+        </fieldset>
+    </form>
+    <!-- Below are not Mustache variables. These are populated by Javascript.  -->
+    <div class="form-item-template hide">
+        <a class="accordion full-width">Nieuw post type</a><span class="accordion-trash"> <i class="fas fa-trash-alt"></i></span>
+        <div class="panel">
+            <label>Naam enkelvoud</label><br>
+            <input class="large" type="text" name="type-name-singular-{id}" placeholder="Dienst" required>
+            <label>Naam meervoud (en slug)</label><br>
+            <input class="large" type="text" name="type-name-plural-{id}" placeholder="Diensten" required>
+            <input class="large" id="type-add-e-{id}" type="checkbox" name="type-add-e-{id}" value="1" checked><label for="type-add-e-{id}">Buigings-e (nieuw of nieuwe)?</label>
+            <label>Dashicon class</label><br>
+            <input class="large no-mar" type="text" name="type-dashicon-{id}" placeholder="dashicons-welcome-learn-more">
+            <p class="description">Klik <a href="https://developer.wordpress.org/resource/dashicons" target="_blank">hier</a> voor alle dashicons.</p>
+            <input class="large" id="type-has-archive-{id}" type="checkbox" name="type-has-archive-{id}" value="1" checked><label for="type-has-archive-{id}">Is er een archive?</label><br>
+            <input class="large no-mar" id="type-is-hierarchical-{id}" type="checkbox" name="type-is-hierarchical-{id}" value="1"><label for="type-is-hierarchical-{id}">Is dit post type hiërarchisch?</label>
+            <p class="description">Kan je een post toewijzen aan een hoofd (parent/child posts)?</p>
+            <label>Rewrite</label><br>
+            <input class="large no-mar" type="text" name="type-rewrite-{id}" placeholder="bedrijfsdienst">
+            <p class="description">Moet de standaard slug gebruikt worden in de URL of moet er een aangepaste url gebruikt worden?</p>
+            <label>Naam positie (waarde/integer)</label><br>
+            <input class="large" type="text" name="type-position-{id}" placeholder="30">
+            <label>Type paginatie</label><br>
+            <select name="type-pagination-{id}" id="type-pagination-{id}">
+                <option value="no-pagination" selected>Geen paginatie (toon alle posts)</option>
+                <option value="default-pagination">Standaard paginatie (pagina nummers)</option>
+                <option value="ajax-pagination">AJAX paginatie (laad meer posts)</option>
+            </select>
+        </div>
+    </div>
+</div>
+
+<div class="code">
+    <h2>Code</h2>
+    {{#obj.getCode}}
+    <h4 class="code-header {{#automatic}}automatic{{/automatic}}">{{title}} {{#automatic}}(Automatisch toegevoegd){{/automatic}}</h4>        <pre><code>{{code}}</code></pre>
+    {{/obj.getCode}}
+</div>
+
+

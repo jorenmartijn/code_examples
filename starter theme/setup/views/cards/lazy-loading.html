@@ -1,0 +1,44 @@
+<div class="description">
+    <h2>Uitleg</h2>
+   <p>
+       Hieronder staat uitgelegd welke standaard technieken wij gebruiken voor het inladen van afbeeldingen op de site.
+       Dit proces bestaat uit meerdere stappen die één voor één uitgewerkt worden. Ook is voor elke stap een voorbeeld snippet aanwezig.
+       <br><br>
+       <span class="important">Afbeeldingsformaten</span><br>
+       Om op elk apparaat de juiste afbeeldingsformaten in te laden is het belangrijk dat deze eerst gedefinieerd worden in het thema. Definieer
+       een los afbeeldingsformaat voor elke keer dat een afbeeldingen anders uitgesneden wordt. Dit kan per breakpoint verschillend zijn. Liever teveel afbeeldingsformaten
+       dan te weinig, maar voeg gelijke formaten wel zoveel mogelijk samen
+        <br><br>
+        <span class="important">Foundation Interchange</span><br>
+        Met Foundation Interchange kun je op elk breakpoint automatisch de juiste afbeelding inladen. Dit kan in combinatie met de verschillende
+        afbeeldingsformaten dus gebruikt worden om, on the fly, bij elk breakpoint een kleinere of een grotere afbeelding in te laden. Dit zorgtv
+        voor een betere gebruikerservaring en kan een manier zijn om er voor te zorgen dat je afbeeldingen altijd in een bepaalde verhouding worden weergegeven.
+        Zie <a href="https://get.foundation/sites/docs/interchange.html" target="_blank">Foundation Interchange</a> voor meer informatie. Let op: Interchange is wat
+       moeilijk met spaties, let dus goed op de voorbeelden die hieronder staan en neem deze exact over.
+       <br><br>
+       <span class="important">Lazy Loading</span><br>
+       Lazy loading wordt binnen onze projecten gedaan door middel van (een aangepaste versie van) de library Unveil. Deze library werkt op zowel normale afbeeldingen als achtergrondafbeeldingen.
+       Bij normale afbeeldingen geef je een class 'lazy' mee en plaats je de source van de afbeelding in data-src in plaats van src. In het src attribuut plaats je een placeholder pixel.
+       Voor achtergrond afbeeldingen geldt bijna hetzelfde, alleen plaats je daar de class 'bg-lazy'.
+       <br><br>
+       <span class="important">Lazy Interchange</span><br>
+       Als je beide bovenstaande technieken combineert krijg je Lazy Interchange. Dit zorgt ervoor dat zowel de Interchange functionaliteit
+       uit Foundation nog werkt en ook het lazy loaden van de initiele afbeelding uitgevoerd wordt.
+       Het enige verschil met normaal lazy loading is dat je, in plaats van data-src, data-lazy als attribuut gebruikt. Deze data-lazy vul je dan niet
+       met één losse afbeeldingsURL, maar met de data die je normaal gesproken in data-interchange zou plaatsen. Dus een afbeeldingsformaat per breakpoint.
+       <br><br>
+       <span class="important">Let op: gebruik waar mogelijk zoveel mogelijk Lazy Interchange. Dit zorgt voor de beste gebruikerservaring en de snelste laadtijden. Gebruik bovenstaande opties niet
+       bij Slick Sliders, gebruik daar de eigen lazy load functie.</span>
+
+   </p>
+</div>
+
+
+<div class="code">
+    <h2>Code</h2>
+    {{#obj.getCode}}
+    <h4 class="code-header {{#automatic}}automatic{{/automatic}}">{{title}} {{#automatic}}(Automatisch toegevoegd){{/automatic}}</h4>        <pre><code>{{code}}</code></pre>
+    {{/obj.getCode}}
+</div>
+
+

@@ -1,0 +1,61 @@
+{
+    "key": "group_5a953576f40ea",
+    "title": "Sidebar opties",
+    "fields": [
+        {
+            "key": "field_5a953586ba3e4",
+            "label": "Sidebar",
+            "name": "post_has_sidebar",
+            "type": "radio",
+            "instructions": "Moet er bij dit bericht een sidebar getoond worden? Zo ja, op welke locatie moet deze worden geplaatst?",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "sidebar_right": "Rechts",
+                "sidebar_left": "Links",
+                "sidebar_none": "Geen"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "sidebar_right",
+            "layout": "vertical",
+            "return_format": "value"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            },
+            {
+                "param": "page_type",
+                "operator": "!=",
+                "value": "front_page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1537964569
+}

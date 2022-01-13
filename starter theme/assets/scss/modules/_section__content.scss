@@ -1,0 +1,114 @@
+section.section-content {
+	// Background
+	&.bg-active {
+		@extend %section-pad;
+		&.white-bg {
+			padding-left: 0;
+			padding-right: 0;
+		}
+		.home & {
+			padding-left: 0;
+			padding-right: 0;
+		}
+
+		&.no-pad {
+		  padding: 0;
+		}
+		&.no-pad-top {
+		  padding-top: 0;
+		}
+		&.no-pad-bottom {
+			padding-bottom: 0;
+		}
+	}
+
+	// multiple content
+	//-----------------
+	&.multiple-content {
+		.column {
+			margin-bottom: rem-calc(20);
+			@include breakpoint(medium) {
+				margin-bottom: 0;
+			}
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	// content with figure
+	//--------------------
+	figure {
+		overflow: hidden;
+		border-radius: $global-radius;
+		margin-bottom: rem-calc(20);
+		@include breakpoint(medium) {
+			margin-bottom: 0;
+		}
+		&.right {
+			margin-top: rem-calc(20);
+			margin-bottom: 0;
+			@include breakpoint(medium) {
+				margin-top: 0;
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	// Video content
+	//---------------
+	.video-container {
+		border-radius: $global-radius;
+		position: relative;
+		overflow: hidden;
+		min-height: rem-calc(235);
+		margin-bottom: rem-calc(20);
+		@include breakpoint(medium) {
+			margin-bottom: 0;
+		}
+		&.right {
+			margin-top: rem-calc(20);
+			margin-bottom: 0;
+			@include breakpoint(medium) {
+				margin-top: 0;
+				margin-bottom: 0;
+			}
+		}
+
+		@include breakpoint(large) {
+			min-height: rem-calc(375);
+		}
+		a.play-button {
+			@extend %transition;
+			background-color: $secondary-color;
+			color: $white;
+			outline: 0;
+			position: absolute;
+			margin: 0 auto;
+			top: 50%;
+			transform: translateY(-50%);
+			left: 0;
+			right: 0;
+			border-radius: 50%;
+			display: block;
+			text-align: center;
+			width: rem-calc(75);
+			height: rem-calc(75);
+			line-height: 75px;
+			font-size: rem-calc(25);
+			i {
+				margin-left: rem-calc(5);
+			}
+			@include breakpoint(large) {
+				width: rem-calc(84);
+				height: rem-calc(84);
+				line-height: 84px;
+				font-size: rem-calc(30);
+			}
+			&:hover {
+				background-color: $primary-color;
+				color: $white;
+			}
+		}
+	}
+}

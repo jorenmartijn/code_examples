@@ -1,0 +1,452 @@
+{
+    "key": "group_55dda494d7b3b",
+    "title": "Algemene opties",
+    "fields": [
+        {
+            "placement": "top",
+            "endpoint": 0,
+            "key": "field_58e6154ffde80",
+            "label": "Bedrijfsgegevens",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "return_format": "array",
+            "preview_size": "full",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": 800,
+            "max_height": 800,
+            "max_size": 1,
+            "mime_types": "",
+            "key": "field_591dae4634967",
+            "label": "Logo",
+            "name": "company_logo",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "Bedrijfsnaam invullen",
+            "prepend": "",
+            "append": "",
+            "key": "field_58e6155efde81",
+            "label": "Bedrijfsnaam",
+            "name": "company_name",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "Adres invullen",
+            "prepend": "",
+            "append": "",
+            "key": "field_58e61574fde82",
+            "label": "Adres",
+            "name": "company_address",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "Postcode en plaatsnaam invullen",
+            "prepend": "",
+            "append": "",
+            "key": "field_58e615a1fde83",
+            "label": "Postcode en plaatsnaam",
+            "name": "company_zip_city",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "Telefoonnummer invullen",
+            "prepend": "",
+            "append": "",
+            "key": "field_58e615c8fde84",
+            "label": "Telefoon",
+            "name": "company_phone",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "Fax invoeren",
+            "prepend": "",
+            "append": "",
+            "key": "field_58e615e2fde85",
+            "label": "Fax",
+            "name": "company_fax",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "Mobiele nummer invoeren",
+            "prepend": "",
+            "append": "",
+            "key": "field_58e615f9fde86",
+            "label": "Mobiel (optioneel)",
+            "name": "company_phone_mobile",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "default_value": "",
+            "placeholder": "E-mailadres invoeren",
+            "prepend": "",
+            "append": "",
+            "key": "field_58e61622fde87",
+            "label": "E-mailadres",
+            "name": "company_email",
+            "type": "email",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "BTW nummer invoeren",
+            "prepend": "",
+            "append": "",
+            "key": "field_58e6163efde88",
+            "label": "BTW nummer",
+            "name": "company_btw",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "KVK invoeren",
+            "prepend": "",
+            "append": "",
+            "key": "field_58e6165afde89",
+            "label": "KVK",
+            "name": "company_kvk",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "height": "",
+            "center_lat": "",
+            "center_lng": "",
+            "zoom": "",
+            "key": "field_58e61679fde8a",
+            "label": "Google maps locatie",
+            "name": "company_location",
+            "type": "google_map",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "placement": "top",
+            "endpoint": 0,
+            "key": "field_590c36f87d358",
+            "label": "Social media",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "Bijv.: https:\/\/www.facebook.com\/bedrijfsnaam",
+            "prepend": "",
+            "append": "",
+            "key": "field_590c37047d359",
+            "label": "Facebook",
+            "name": "sm_facebook",
+            "type": "text",
+            "instructions": "Vul hier de url van de Facebook-pagina in.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "Bijv.: https:\/\/www.twitter.com\/bedrijfsnaam",
+            "prepend": "",
+            "append": "",
+            "key": "field_590c39051feec",
+            "label": "Twitter",
+            "name": "sm_twitter",
+            "type": "text",
+            "instructions": "Vul hier de url van de Twitter-pagina in.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "Bijv.: https:\/\/www.linkedin.com\/bedrijfsnaam",
+            "prepend": "",
+            "append": "",
+            "key": "field_590c392e1feed",
+            "label": "LinkedIn",
+            "name": "sm_linkedin",
+            "type": "text",
+            "instructions": "Vul hier de url van de LinkedIn-pagina in.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "Bijv.: https:\/\/www.instagram.com\/bedrijfsnaam",
+            "prepend": "",
+            "append": "",
+            "key": "field_591979a1b606b",
+            "label": "Instagram",
+            "name": "sm_instagram",
+            "type": "text",
+            "instructions": "Vul hier de url van de Instagram-pagina in.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "Bijv.: https:\/\/www.youtube.com\/bedrijfsnaam",
+            "prepend": "",
+            "append": "",
+            "key": "field_591979c3b606c",
+            "label": "YouTube",
+            "name": "sm_youtube",
+            "type": "text",
+            "instructions": "Vul hier de url van de YouTube-pagina in.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "Bijv.: https:\/\/www.vimeo.com\/bedrijfsnaam",
+            "prepend": "",
+            "append": "",
+            "key": "field_591979d7b606d",
+            "label": "Vimeo",
+            "name": "sm_vimeo",
+            "type": "text",
+            "instructions": "Vul hier de url van de Vimeo-pagina in.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "Bijv.: https:\/\/www.pinterest.com\/bedrijfsnaam",
+            "prepend": "",
+            "append": "",
+            "key": "field_591979e7b606e",
+            "label": "Pinterest",
+            "name": "sm_pinterest",
+            "type": "text",
+            "instructions": "Vul hier de url van de Pinterest-pagina in.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "Bijv.: https:\/\/www.skype.com\/bedrijfsnaam",
+            "prepend": "",
+            "append": "",
+            "key": "field_591979f5b606f",
+            "label": "Skype",
+            "name": "sm_skype",
+            "type": "text",
+            "instructions": "Vul hier de url van de Skype-pagina in.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "placement": "top",
+            "endpoint": 0,
+            "key": "field_58e6169cfde8b",
+            "label": "Privacy verklaring",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "default_value": "",
+            "placeholder": "URL privacy verklaring plaatsen",
+            "key": "field_58e616aafde8c",
+            "label": "URL privacy verklaring",
+            "name": "company_privacy_declaration",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "general-settings"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1502886913
+}

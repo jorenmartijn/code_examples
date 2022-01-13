@@ -1,0 +1,33 @@
+// section.section-cards {
+// 	&.bg-active {
+// 		&.white-bg {
+// 			padding-left: 0;
+// 			padding-right: 0;
+// 			.card {
+// 				figure {
+// 					border-radius: $global-radius $global-radius 0 0;
+// 				}
+// 			}
+// 		}
+// 		&.primary-bg, &.light-bg {
+// 			.card {
+// 				// border: none; border: 0;
+// 			}
+// 		}
+// 		.card {
+// 			width: 100%;
+// 			// box-shadow: none;
+// 			figure {
+// 			 border-radius: $global-radius;
+// 			}
+// 			.content {
+// 				padding-left: 0;
+// 				padding-right: 0;
+// 				padding-bottom: 0;
+// 			}
+// 		}
+// 	}
+// }
+.columns .card {
+	border-bottom-color: $tertiary;
+}

@@ -1,0 +1,44 @@
+<div class="description">
+    <h2>Uitleg</h2>
+    <p>
+        Selecteer hier welke Gutenberg blokken je nodig hebt voor de website.
+    </p>
+</div>
+
+
+<div class="fields">
+    <h2>Gutenberg blokken</h2>
+    <form method="POST">
+        <fieldset>
+            <div class="field-group">
+                <input class="large" id="gutenberg-cta" type="checkbox" name="gutenberg-cta" value="1" {{#obj.gutenbergCta}}checked{{/obj.gutenbergCta}}><label for="gutenberg-cta">CTA blok</label>
+            </div>
+
+            <div class="field-group">
+                <input class="large" id="gutenberg-hero" type="checkbox" name="gutenberg-hero" value="1" {{#obj.gutenbergHero}}checked{{/obj.gutenbergHero}}><label for="gutenberg-hero">Hero blok</label>
+            </div>
+
+            <div class="field-group">
+                <input class="large" id="gutenberg-image" type="checkbox" name="gutenberg-image" value="1" {{#obj.gutenbergImage}}checked{{/obj.gutenbergImage}}><label for="gutenberg-image">Afbeelding blok</label>
+            </div>
+
+            <div class="field-group">
+                <input class="large" id="gutenberg-featured-posttype" type="checkbox" name="gutenberg-featured-posttype" value="1" {{#obj.gutenbergFeaturedPosttype}}checked{{/obj.gutenbergFeaturedPosttype}}><label for="gutenberg-featured-posttype">Gerelateerde posttypes blok</label>
+            </div>
+
+            <div class="field-group">
+                <input class="large" id="gutenberg-slider" type="checkbox" name="gutenberg-slider" value="1" {{#obj.gutenbergSlider}}checked{{/obj.gutenbergSlider}}><label for="gutenberg-slider">Slider blok</label>
+            </div>
+
+            <div class="field-group">
+                <input class="large" id="gutenberg-text-img" type="checkbox" name="gutenberg-text-img" value="1" {{#obj.gutenbergTextImg}}checked{{/obj.gutenbergTextImg}}><label for="gutenberg-text-img">Tekst + Afbeelding blok</label>
+            </div>
+
+            <div class="field-group">
+                <input class="large" id="gutenberg-text-wide" type="checkbox" name="gutenberg-text-wide" value="1" {{#obj.gutenbergTextWide}}checked{{/obj.gutenbergTextWide}}><label for="gutenberg-text-wide">Tekst breed blok</label>
+            </div>
+
+            <input class="button" type="submit" value="Opslaan">
+        </fieldset>
+    </form>
+</div>

@@ -1,0 +1,79 @@
+{
+    "key": "group_5a93fc27443a9",
+    "title": "Variabele achtergrondkleur",
+    "fields": [
+        {
+            "key": "field_5a93fc31d7a82",
+            "label": "Achtergrondkleur",
+            "name": "var_background_color",
+            "type": "select",
+            "instructions": "Kies hier de achtergrondkleur die dit blok moet krijgen.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "primary-bg": "Hoofdkleur",
+                "secondary-bg": "Steunkleur",
+                "white-bg": "Wit",
+                "gray-bg": "Grijs"
+            },
+            "default_value": [
+                "white-bg"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5aec264789bb8",
+            "label": "Ruimte om het blok",
+            "name": "var_whitespace",
+            "type": "radio",
+            "instructions": "Moet er (wit)ruimte boven of onder het blok getoond worden?",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "pad": "Boven en onder",
+                "no-pad-bottom": "Alleen boven",
+                "no-pad-top": "Alleen onder",
+                "no-pad": "Geen witruimte"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "pad",
+            "layout": "horizontal",
+            "return_format": "value"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 0,
+    "description": "",
+    "modified": 1537274423
+}

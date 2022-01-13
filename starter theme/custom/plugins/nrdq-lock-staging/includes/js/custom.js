@@ -1,0 +1,1 @@
+/* Plugin front-end JS */

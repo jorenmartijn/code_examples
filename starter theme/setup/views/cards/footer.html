@@ -1,0 +1,31 @@
+<div class="description">
+    <h2>Uitleg</h2>
+   <p>
+       Hier kunnen een aantal standaard instellingen worden aangegeven voor de footer van de site.
+       Allereerst kun je aangeven of de footer een logo bevat. In dat geval zal deze automatisch toegevoegd worden aan de linkerkant van de footer.<br><br>
+       Daarnaast is het mogelijk om aan te geven of je footer menu's bevat en het aantal dat er dan in
+       getoond moet worden. Deze menu's worden automatisch gegenereerd, gevuld en toegekend aan de juiste menu-locatie.
+   </p>
+</div>
+
+<div class="fields">
+    <h2>Data</h2>
+    <form method="POST">
+        <fieldset>
+            <input class="large" id="has-logo" type="checkbox" name="has-logo" value="1" {{#obj.hasLogo}}checked{{/obj.hasLogo}}><label for="has-logo">Heeft deze footer een logo?</label><br>
+            <label>Aantal menu's in de footer (0 - 3)</label><br>
+            <input type="number" id="number-of-menus" name="number-of-menus" min="0" max="3" placeholder="0" value="{{obj.numberOfMenus}}">
+            <input class="button" type="submit" value="Opslaan">
+        </fieldset>
+    </form>
+</div>
+
+<div class="code">
+    <h2>Code</h2>
+    {{#obj.getCode}}
+    <h4 class="code-header {{#automatic}}automatic{{/automatic}}">{{title}} {{#automatic}}(Automatisch toegevoegd){{/automatic}}</h4>
+    <pre><code>{{code}}</code></pre>
+    {{/obj.getCode}}
+</div>
+
+

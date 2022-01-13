@@ -1,0 +1,41 @@
+.off-canvas {
+  z-index: 9;
+  background-color: $white;
+  box-shadow: none !important;
+  @include breakpoint(large) {
+		display: none;
+	}
+  &.is-open {
+    &.position-right {
+      width: 100%;
+      &.is-transition-push {
+	      &:after {
+					display: none;
+	     	}
+      }
+    }
+  }
+}
+
+.off-canvas,
+.js-off-canvas-overlay.is-overlay-fixed {
+  top: rem-calc(46);
+  &.sticky-header {
+	  top: rem-calc(46);
+  }
+  .logged-in & {
+	 top: rem-calc(100);
+	  @include breakpoint(738) {
+		  top:rem-calc(116);
+		}
+  }
+  @include breakpoint(large) {
+		display: none !important;
+	}
+}
+
+.is-off-canvas-open {
+	.bottom-header {
+		height: rem-calc(110);
+	}
+}

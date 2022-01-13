@@ -1,0 +1,98 @@
+{
+    "key": "group_5ee749b6e8f07",
+    "title": "Gutenberg - Posttype uitlichten",
+    "fields": [
+        {
+            "key": "field_5ee749b702af7",
+            "label": "Uitleg",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5ee749b702bab",
+            "label": "Posttype uitlichten blok",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Met dit blok is het mogelijk om 'posttypes' uit te lichten, de weergave van deze berichten zal hetzelfde zijn als het archief(tenzij anders ingesteld door een developer) Klik op 'instellingen' om dit blok aan te passen.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_5ee749b702c07",
+            "label": "Instellingen",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5ee74a08fd12a",
+            "label": "Uitgelichte posttype",
+            "name": "featured_posttype",
+            "type": "relationship",
+            "instructions": "Selecteer de gewenste posttype en berichten. Zorg er voor dat berichten uit 1 posttype geselecteerd worden.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": "",
+            "taxonomy": "",
+            "filters": [
+                "search",
+                "post_type",
+                "taxonomy"
+            ],
+            "elements": "",
+            "min": "",
+            "max": "",
+            "return_format": "object"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/featured-posttype"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "Buildin",
+    "modified": 1592216205
+}

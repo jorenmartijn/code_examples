@@ -1,0 +1,7 @@
+{
+    "require": {
+        "swiftmailer/swiftmailer": "^5.4",
+        "mustache/mustache" : "^2.7",
+        "yahnis-elsts/plugin-update-checker": "^4.4"
+    }
+}

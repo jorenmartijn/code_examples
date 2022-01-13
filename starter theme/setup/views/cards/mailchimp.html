@@ -1,0 +1,31 @@
+<div class="description">
+    <h2>Uitleg</h2>
+   <p>
+       Voor het gebruik van Mailchimp op je site zijn er meerdere opties. De opties die wij het meest gebruiken staan hieronder uitgewerkt.
+       <br><br>
+       <span class="important">Embedded forms</span><br>
+       Via Mailchimp zelf kun je HTML forms genereren op basis van velden/kolommen die gedefinieerd zijn. Bij deze formulier kun je
+       ook instellen wat de bedankteksten, bedankpagina's, emailteksten e.d. zijn. Het nadeel aan dit type formulier is dat het niet
+       te integreren is in een bestaand formulier. Ook is de whitelabeling niet altijd volledig mogelijk.
+       <br><br>
+       <span class="important">Plugins</span><br>
+       Er zijn ook meerdere plugins beschikbaar voor het integreren van Mailchimp binnen de formulieren. Gravity Forms heeft een eigen plugin en ook Woocommerce
+       heeft een speciale Mailchimp koppeling. Als je implementatie vrij standaard is dan kun je deze plugins makkelijk gebruiken. Wordt
+       de implementatie meer maatwerk, bijvoorbeeld eigen double opt-in, of data van buiten het formulier moet meegestuurd worden, dan ben je
+       al snel aangewezen op een maatwerk koppeling met Mailchimp.
+       <br><br>
+       <span class="important">Maatwerk</span><br>
+       Met de maatwerk koppeling naar Mailchimp is in principe alles mogelijk, maar moet elke uitbreiding zelf gebouwd worden. De koppeling
+       zelf is standaard aanwezig in het basisproject, maar het betreffende formulier moet zelf deze koppeling aanroepen. Ook moeten er een drietal
+       defines worden toegevoegd in de wp-config, namelijk: de API-key, de base-URL en het list-ID. Deze kun je allemaal vinden in Mailchimp.
+   </p>
+</div>
+
+<div class="code">
+    <h2>Code</h2>
+    {{#obj.getCode}}
+    <h4 class="code-header {{#automatic}}automatic{{/automatic}}">{{title}} {{#automatic}}(Automatisch toegevoegd){{/automatic}}</h4>        <pre><code>{{code}}</code></pre>
+    {{/obj.getCode}}
+</div>
+
+

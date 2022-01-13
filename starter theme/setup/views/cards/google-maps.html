@@ -1,0 +1,46 @@
+<div class="description">
+    <h2>Uitleg</h2>
+   <p>
+       Hieronder kan je een API-key voor het inladen van Google Maps invoeren. Laat dit veld leeg als je site geen Maps implementatie heeft.
+       <br><br>
+       Voor het aanmaken van een API-key kun je de volgende stappen volgen:<br>
+       <ol>
+            <li>Log in op het beheer@nordique.nl account</li>
+            <li>Ga naar <a href="https://console.cloud.google.com" target="_blank">Google Cloud Console</a></li>
+            <li>Klik bovenin op huidige project en klik in de popup op 'Nieuw project'</li>
+            <li>Kies een projectnaam</li>
+            <li>Koppel het project aan het factureringsaccount 'Algemeen' en klik op 'Maken'</li>
+            <li>Ga via het menu aan de linkerkant naar API's en Services -> Inloggegevens</li>
+            <li>Klik bovenin op Gegevens maken -> API-sleutel</li>
+            <li>Kopieer de API-sleutel die je ziet naar je klembord</li>
+            <li>Klik op sleutel beperken</li>
+            <li>Klik onder App-beperkingen op HTTP-verwijzingen</li>
+            <li>Voer alle sites in waarop de key moet werken (Dev, staging en live)</li>
+            <li>Klik op opslaan</li>
+            <li>Klik links in het menu op Marketplace</li>
+            <li>Zoek in de marketplace naar de "Maps Javascript API" en schakel die in</li>
+            <li>Schakel indien nodig meer API's in, maar houdt er rekening mee dat dit geld kan kosten</li>
+            <li>Plak de gekopieerde API-sleutel in het veld hieronder en klik op Opslaan</li>
+        </ol>
+   </p>
+</div>
+
+<div class="fields">
+    <h2>Data</h2>
+    <form method="POST">
+        <fieldset>
+            <label>Google Maps API key</label><br>
+            <input class="large" id="api_key" type="text" name="api_key" placeholder="Google Maps API key" value="{{obj.getApiKey}}">
+            <input class="button" type="submit" value="Opslaan">
+        </fieldset>
+    </form>
+</div>
+
+<div class="code">
+    <h2>Code</h2>
+    {{#obj.getCode}}
+    <h4 class="code-header {{#automatic}}automatic{{/automatic}}">{{title}} {{#automatic}}(Automatisch toegevoegd){{/automatic}}</h4>        <pre><code>{{code}}</code></pre>
+    {{/obj.getCode}}
+</div>
+
+

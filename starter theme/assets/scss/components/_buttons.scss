@@ -1,0 +1,132 @@
+// buttons
+//--------
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+
+// default button
+//---------------
+%button {
+  font-family: $header-font-family;
+  appearance: none;
+  border: 0;
+  border-radius: 10rem;
+  cursor: pointer;
+  display: inline-block;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: bold;
+  margin: 0.5rem 0 0;
+  padding: rem-calc(0 25);
+  text-decoration: none;
+  vertical-align: bottom;
+  width: 100%;
+  position: relative;
+  font-size: rem-calc(15);
+  line-height: rem-calc(50);
+  text-align: left;
+  transition: background .2s ease-in-out;
+
+  @include breakpoint(medium) {
+    width: auto;
+  }
+  &:focus {
+    outline: 0;
+  }
+
+  &.is-full-width {
+    width: 100%;
+  }
+  &.has-arrow {
+	  position: relative;
+	  padding-right: rem-calc(65);
+	  @include breakpoint(medium) {
+      min-width: rem-calc(230);
+      margin-top: 10px;
+      z-index:10;
+		}
+	  &:after {
+		  content: '\f061';
+		  font-family: 'Font Awesome\ 5 Pro';
+		  position: absolute;
+		  top: 50%;
+		  right: rem-calc(22);
+		  transform: translateY(-50%);
+		  transition: right .4s ease-in-out;
+		}
+		&:hover {
+			&:after {
+				right: rem-calc(18);
+			}
+		}
+  }
+}
+
+.button-group {
+	a {
+		@include breakpoint(medium) {
+			margin-right: rem-calc(15);
+      // margin-bottom: 1rem;
+      margin-top: 0;
+      margin-bottom: 0;
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+}
+
+
+// add button mixin
+// ----------------
+@mixin add-button($bgcolor, $textcolor, $active-color, $is-ghost) {
+  @extend %button;
+  background-color: $bgcolor;
+  color: $textcolor;
+  @if $is-ghost == 'true' {
+		// not in use
+  } @else {
+    &:hover {
+      background-color: darken($bgcolor, 5%);
+      color: $textcolor;
+    }
+    &:active,
+    &:focus {
+      background-color: darken($bgcolor, 5%);
+      color: $active-color;
+    }
+  }
+}
+
+
+// primary button
+// --------------
+.btn-primary {
+  @include add-button($primary-color, $white, $white, 'false');
+  line-height: 50px;
+}
+
+
+// secondary button
+// ----------------
+.btn-secondary {
+  @include add-button($secondary-color, $white, $white, 'false');
+  line-height: 50px;
+}
+
+
+// tertiary button
+// ---------------
+.btn-tertiary {
+  @include add-button($tertiary, $white, $white, 'false');
+}
+
+
+// white button
+// ------------
+.btn-white {
+  @include add-button($white, $primary-color, $primary-color, 'false');
+}

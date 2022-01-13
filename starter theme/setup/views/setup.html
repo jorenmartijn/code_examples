@@ -1,0 +1,29 @@
+<header>
+    <h1>Introductie</h1>
+    <p class="intro">Dit is het overzicht van alle functionaliteiten die je kunt opzetten van de Nordique Project Setup.
+    Veel van deze functionaliteiten verzorgen automatische generatie van WordPress onderdelen of het genereren van code snippets
+    die automatisch aan je thema worden toegevoegd.
+    <br>Elke plek in het thema waar gegenereerde code kan worden toegevoegd herken je aan het 'BEGIN [code]' en 'END [code]' stuk. Wil
+    je dat er geen generereerde code meer kan worden toegevoegd, verwijder die regels dan. Let op: dit zorgt er dus wel voor dat
+    gedeelten van deze Setup niet correct meer werken.
+    <br>Nieuw in het thema is het bestand examples.php, deze bevat een aantal standaard codesnippets die gegenereerd zijn aan de hand van de
+    hier ingevulde data.
+    <br><br>
+    Als je ideeen hebt om deze Setup uit te breiden dan kun je dat aangeven bij een PM.</p>
+</header>
+<div class="grid">
+    {{#cards}}
+    <div class="col-1-3">
+        <a class="card {{#isDisabled}}disabled{{/isDisabled}}" href="{{^isDisabled}}{{getUrl}}{{/isDisabled}}{{#isDisabled}}javascript:;{{/isDisabled}}">
+            {{#isFinished}}
+                <div class="finished"><i class="fas fa-check"></i></div>
+            {{/isFinished}}
+            {{#getIcon}}<div class="icon"><i class="{{getIcon.icon}} {{getIcon.color}}"></i></div>{{/getIcon}}
+            <div class="content">
+                <h2 class="text-center">{{data.title}}</h2>
+                <p>{{{data.description}}}</p>
+            </div>
+        </a>
+    </div>
+    {{/cards}}
+</div>

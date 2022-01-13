@@ -1,0 +1,246 @@
+//  List styling
+//  ------------
+//
+// 1. <ol>
+// 2. contact
+// 3. social
+// 4. opening
+// 5. arrow
+// 6. link
+// 7. No bullet list
+//
+//  --------
+
+// list options
+//  -----------
+.two-columns {
+	columns: 1;
+	-webkit-columns: 1;
+		 -moz-columns: 1;
+	column-gap: 0;
+	@include breakpoint(medium) {
+		columns: 2;
+		-webkit-columns: 2;
+			 -moz-columns: 2;
+		column-gap: 0;
+	}
+	li {
+		display: block;
+		padding-right: 1rem;
+	}
+}
+
+
+// 1. <ol>
+// -------
+ol {
+	list-style-type:decimal;
+}
+
+
+// 2. contact
+// ----------
+ul.contact-list {
+	list-style-type: none;
+	@extend .no-pad;
+	@extend .no-mar-left;
+	margin-bottom: 0;
+	li {
+		i {
+			position: relative;
+			margin-right: rem-calc(10);
+			color: $primary-color;
+			font-size: $font-size-17;
+			min-width: rem-calc(17); // helper, same width
+		}
+		a {
+			color: $dark-gray;
+			font-family: $header-font-family;
+			text-decoration: none;
+
+			&:hover {
+				color: $anchor-color-hover;
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+
+// 3. social
+// ---------
+ul.social-list {
+	list-style-type: none;
+	@extend .no-pad;
+	@extend .no-mar-left;
+	li {
+		display: inline-block;
+		margin-right: rem-calc(40);
+		@include breakpoint(large) {
+			margin-right: rem-calc(15);
+		}
+		&:last-child {
+			margin-right: 0;
+		}
+		a {
+			@extend %transition;
+			// color: $primary-color;
+			font-size: $font-size-20;
+			@include breakpoint(large) {
+				font-size: $font-size-18;
+			}
+			/*
+			&:hover {
+				color: $secondary-color;
+			}
+			*/
+			&.sm_facebook-f {
+				color: $facebook;
+				&:hover {
+					color: darken($facebook, 5%);
+				}
+			}
+			&.sm_twitter {
+				color: $twitter;
+				&:hover {
+					color: darken($twitter, 5%);
+				}
+			}
+			&.sm_linkedin {
+				color: $linkedin;
+				&:hover {
+					color: darken($linkedin, 5%);
+				}
+			}
+			&.sm_instagram {
+				color: $instagram;
+				&:hover {
+					color: darken($instagram, 5%);
+				}
+			}
+			&.sm_youtube {
+				color: $youtube;
+				&:hover {
+					color: darken($youtube, 5%);
+				}
+			}
+			&.sm_vimeo-v {
+				color: $vimeo;
+				&:hover {
+					color: darken($vimeo, 5%);
+				}
+			}
+			&.sm_pinterest {
+				color: $pinterest;
+				&:hover {
+					color: darken($pinterest, 5%);
+				}
+			}
+			&.sm_skype {
+				color: $skype;
+				&:hover {
+					color: darken($skype, 5%);
+				}
+			}
+		}
+	}
+}
+
+
+// 4. opening
+// ----------
+ul.opening-list {
+	list-style-type: none;
+	@extend .no-pad;
+	@extend .no-mar-left;
+	li {
+		margin-bottom: rem-calc(4);
+		&:last-child {
+			margin-bottom: 0;
+		}
+		span {
+			display: inline-block;
+		}
+		span.day {
+			min-width: rem-calc(140);
+			@include breakpoint(1025) {
+				min-width: rem-calc(95);
+			}
+			@include breakpoint(1200) {
+				min-width: rem-calc(140);
+			}
+		}
+		&.current-day {
+			font-weight: bold;
+		}
+	}
+}
+
+
+// 5. arrow
+// --------
+ul.arrow-list {
+	list-style-type: none;
+	@extend .no-pad;
+	@extend .no-mar-left;
+	li {
+		position: relative;
+		margin-bottom: rem-calc(8);
+		padding-left: rem-calc(22);
+
+		&:before {
+			content: '\f105';
+			font-family: 'Font Awesome\ 5 Pro';
+			@extend %transition;
+			color: $tertiary;
+			font-size: $font-size-17;
+			position: absolute;
+			left: 0;
+			top: rem-calc(2);
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+		a {
+		text-decoration: underline;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+		&:hover {
+			&:before {
+				color: $tertiary;
+				left: rem-calc(3);
+			}
+		}
+	}
+}
+
+
+// 6. link
+//--------
+ul.link-list {
+	list-style-type: none;
+	@extend .no-pad;
+	@extend .no-mar-left;
+	li {
+		a {
+			@extend %transition;
+			color: inherit;
+			text-decoration: none;
+			&:hover {
+				color: $anchor-color-hover;
+			}
+		}
+	}
+}
+
+
+// 7. No bullet list
+//------------------
+ul.no-bullet-list {
+	list-style-type: none;
+	@extend .no-pad;
+	@extend .no-mar-left;
+}
