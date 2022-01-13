@@ -1,7 +1,7 @@
 # code_examples
 
 * code_snippets :
-    * a few bits of custom WP functions I had to make for a client:
+    * a few bits of custom WP functions I had to make for a client (with admittedly a limited time/budget):
         * *gforms_donation-mail_attachment.php:* generates an attachment image and adds it to a GForms mail
         *  *donation_buttons_counter.php:*  custom donation buttons and counter in the form of a shortcode. <br/> <img src="./code_snippets/donation_screenshot.png"/>
     * plus a PHP class that can generate the *functionality and structure* for calendar views. Can be used to generate a calendar with previous/next month, trailing and leading days, week numbers, etc.
